@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Projetos | Wellington Costa</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#c2c7d0",
+                        "on-secondary-fixed-variant": "#693c00",
+                        "on-primary-fixed": "#001c38",
+                        "error-container": "#93000a",
+                        "surface-container-lowest": "#060f16",
+                        "surface-tint": "#a2c9ff",
+                        "primary-fixed": "#d3e4ff",
+                        "surface-dim": "#0b141c",
+                        "on-surface-variant": "#c0c7d4",
+                        "on-tertiary-fixed-variant": "#42474f",
+                        "on-background": "#dae3ee",
+                        "on-secondary-container": "#4d2b00",
+                        "on-error": "#690005",
+                        "surface-container-low": "#141c24",
+                        "surface-container-highest": "#2d363e",
+                        "tertiary": "#c2c7d0",
+                        "on-secondary": "#4a2800",
+                        "surface-container-high": "#222b33",
+                        "surface-container": "#182028",
+                        "on-secondary-fixed": "#2c1600",
+                        "secondary-fixed-dim": "#ffb870",
+                        "tertiary-fixed": "#dee2ec",
+                        "on-tertiary-container": "#353a41",
+                        "surface": "#0b141c",
+                        "primary-fixed-dim": "#a2c9ff",
+                        "on-primary-fixed-variant": "#004882",
+                        "inverse-surface": "#dae3ee",
+                        "error": "#ffb4ab",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#171c23",
+                        "on-primary": "#00315c",
+                        "inverse-primary": "#0060aa",
+                        "on-surface": "#dae3ee",
+                        "outline-variant": "#414752",
+                        "secondary-fixed": "#ffdcbe",
+                        "on-tertiary": "#2c3138",
+                        "tertiary-container": "#9fa3ac",
+                        "secondary": "#ffb870",
+                        "outline": "#8b919d",
+                        "surface-bright": "#313a43",
+                        "primary": "#a2c9ff",
+                        "on-primary-container": "#003a6b",
+                        "primary-container": "#58a6ff",
+                        "surface-variant": "#2d363e",
+                        "secondary-container": "#e18501",
+                        "inverse-on-surface": "#29313a",
+                        "background": "#0b141c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "lg": "48px",
+                        "container-max": "1200px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "xs": "4px",
+                        "md": "24px",
+                        "gutter": "24px",
+                        "xl": "80px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Space Grotesk"],
+                        "code-block": ["monospace"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "display": ["Space Grotesk"],
+                        "h2": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "h1": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "code-block": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display": ["48px", { "lineHeight": "1.1", "fontWeight": "700" }],
+                        "h2": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        @media (max-width: 767px) {
+            .mobile-project-active {
+                transform: scale(1.03) translateY(-5px);
+                border-color: #58A6FF !important;
+                box-shadow: 0 10px 30px -10px rgba(88, 166, 255, 0.3);
+                z-index: 10;
+                transition: all 0.5s ease-out !important;
+            }
+            .mobile-project-active h2 {
+                color: #58A6FF !important;
+                transition: color 0.5s ease-out !important;
+            }
+            .project-card {
+                transition: all 0.5s ease-out;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md text-body-md pt-xl">
+    <!-- TopNavBar -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#0D1117] border-b border-[#30363D]">
+        <div class="max-w-[1200px] mx-auto flex justify-between items-center px-6 md:px-12 py-4">
+            <div class="text-xl font-bold tracking-widest text-[#58A6FF] font-space-grotesk tracking-tight">
+                WELLINGTON COSTA
+            </div>
+        <nav class="hidden md:flex gap-6 items-center">
+            <a class="text-[#8B949E] font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform font-space-grotesk tracking-tight"
+                href="index.html">Início</a>
+            <a class="text-[#8B949E] font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform font-space-grotesk tracking-tight"
+                href="about.html">Sobre</a>
+            <a class="text-[#58A6FF] border-b-2 border-[#58A6FF] pb-1 hover:text-white transition-colors duration-200 active:scale-95 transition-transform font-space-grotesk tracking-tight"
+                href="projects.html">Projetos</a>
+            <a class="text-[#8B949E] font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform font-space-grotesk tracking-tight"
+                href="skills.html">Habilidades</a>
+            <a class="text-[#8B949E] font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform font-space-grotesk tracking-tight"
+                href="contact.html">Contato</a>
+        </nav>
+        <div class="flex items-center gap-4">
+            <div class="hidden sm:flex gap-2 text-[#58A6FF]">
+                <span class="material-symbols-outlined">terminal</span>
+                <span class="material-symbols-outlined">code</span>
+            </div>
+            <a href="contact.html"
+                class="hidden sm:block bg-[#58A6FF] text-[#001c38] px-4 py-2 rounded-DEFAULT font-space-grotesk font-bold text-sm tracking-wide hover:bg-[#79b8ff] transition-colors">
+                Entre em Contato
+            </a>
+            <button id="mobile-menu-toggle" class="md:hidden text-slate-300 hover:text-white transition-colors p-1">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </div>
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0D1117] border-b border-[#30363D] py-6 px-6 flex flex-col gap-4 shadow-xl">
+        <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="index.html">Início</a>
+        <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="about.html">Sobre</a>
+        <a class="text-[#58A6FF] font-medium py-2 border-b border-white/5" href="projects.html">Projetos</a>
+        <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="skills.html">Habilidades</a>
+        <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="contact.html">Contato</a>
+        <a href="contact.html" class="sm:hidden bg-[#58A6FF] text-[#001c38] px-4 py-3 rounded-DEFAULT font-bold text-center mt-4">Entre em Contato</a>
+    </div>
+    </header>
+    <!-- Main Content Canvas -->
+    <main class="flex-grow w-full max-w-[1200px] mx-auto px-6 md:px-12 py-12 md:py-20 flex flex-col gap-lg">
+        <header class="flex flex-col gap-sm text-center md:text-left">
+            <h1 class="font-h1 text-3xl sm:text-h1 text-on-surface">Arquiteturas de Sistema</h1>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto md:mx-0">
+                Uma seleção de sistemas backend de alta performance, arquiteturas distribuídas e microserviços projetados para escala e resiliência.
+            </p>
+        </header>
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+            <!-- Project Card 1 -->
+            <article
+                class="project-card bg-surface-container border border-outline-variant border-t-2 border-t-secondary-container rounded-lg p-md flex flex-col gap-md relative overflow-hidden group">
+                <div class="flex flex-col gap-xs">
+                    <h2 class="font-h2 text-h2 text-on-surface group-hover:text-primary-container transition-colors">
+                        Ecossistema de Microserviços de E-commerce</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        Um backend de e-commerce altamente escalável construído com uma abordagem de domain-driven design. Possui rastreamento distribuído, comunicação resiliente entre serviços e tratamento de consistência eventual.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-xs">
+                    <span
+                        class="bg-surface-container-highest px-3 py-1 rounded-full font-label-caps text-label-caps text-on-surface-variant uppercase">Spring
+                        Cloud</span>
+                    <span
+                        class="bg-surface-container-highest px-3 py-1 rounded-full font-label-caps text-label-caps text-on-surface-variant uppercase">Kafka</span>
+                    <span
+                        class="bg-surface-container-highest px-3 py-1 rounded-full font-label-caps text-label-caps text-on-surface-variant uppercase">PostgreSQL</span>
+                    <span
+                        class="bg-surface-container-highest px-3 py-1 rounded-full font-label-caps text-label-caps text-on-surface-variant uppercase">Docker</span>
+                </div>
+                <div class="mt-auto pt-md border-t border-outline-variant/50 flex flex-col sm:flex-row gap-sm">
+                    <a class="flex items-center gap-2 px-4 py-2 border border-outline-variant text-primary-container rounded-DEFAULT hover:bg-primary-container/10 transition-colors font-label-caps text-label-caps uppercase"
+                        href="https://github.com/WellSCosta">
+                        <span class="material-symbols-outlined text-sm">code</span>
+                        Código Fonte (GitHub)
+                    </a>
+                    <a class="flex items-center gap-2 px-4 py-2 text-outline hover:text-on-surface transition-colors font-label-caps text-label-caps uppercase"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm">api</span>
+                        Swagger API
+                    </a>
+                </div>
+            </article>
+            <!-- Project Card 2 -->
+            <article
+                class="project-card bg-surface-container border border-outline-variant border-t-2 border-t-secondary-container rounded-lg p-md flex flex-col gap-md relative overflow-hidden group">
+                <div class="flex flex-col gap-xs">
+                    <h2 class="font-h2 text-h2 text-on-surface group-hover:text-primary-container transition-colors">
+                        Core de API REST Bancária</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        API RESTful segura e de alto rendimento projetada para transações financeiras. Implementa segurança rigorosa OAuth2/OIDC, chaves de idempotência e registro de auditoria abrangente.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-xs">
+                    <span
+                        class="bg-surface-container-highest px-3 py-1 rounded-full font-label-caps text-label-caps text-on-surface-variant uppercase">Spring
+                        Boot</span>
+                    <span
+                        class="bg-surface-container-highest px-3 py-1 rounded-full font-label-caps text-label-caps text-on-surface-variant uppercase">Spring
+                        Security</span>
+                    <span
+                        class="bg-surface-container-highest px-3 py-1 rounded-full font-label-caps text-label-caps text-on-surface-variant uppercase">Redis</span>
+                    <span
+                        class="bg-surface-container-highest px-3 py-1 rounded-full font-label-caps text-label-caps text-on-surface-variant uppercase">Vault</span>
+                </div>
+                <div class="mt-auto pt-md border-t border-outline-variant/50 flex gap-sm">
+                    <a class="flex items-center gap-2 px-4 py-2 border border-outline-variant text-primary-container rounded-DEFAULT hover:bg-primary-container/10 transition-colors font-label-caps text-label-caps uppercase"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm">code</span>
+                        Código Fonte (GitHub)
+                    </a>
+                    <a class="flex items-center gap-2 px-4 py-2 text-outline hover:text-on-surface transition-colors font-label-caps text-label-caps uppercase"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm">menu_book</span>
+                        Documentação
+                    </a>
+                </div>
+            </article>
+            <!-- Project Card 3 -->
+            <article
+                class="project-card bg-surface-container border border-outline-variant border-t-2 border-t-secondary-container rounded-lg p-md flex flex-col gap-md relative overflow-hidden group">
+                <div class="flex flex-col gap-xs">
+                    <h2 class="font-h2 text-h2 text-on-surface group-hover:text-primary-container transition-colors">
+                        Motor de Notificação em Tempo Real</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        Um sistema de entrega de notificações de baixa latência lidando com milhares de conexões WebSocket simultâneas, utilizando corretores de mensagens para fan-out confiável e garantias de entrega.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-xs">
+                    <span
+                        class="bg-surface-container-highest px-3 py-1 rounded-full font-label-caps text-label-caps text-on-surface-variant uppercase">Java
+                        17</span>
+                    <span
+                        class="bg-surface-container-highest px-3 py-1 rounded-full font-label-caps text-label-caps text-on-surface-variant uppercase">WebSockets</span>
+                    <span
+                        class="bg-surface-container-highest px-3 py-1 rounded-full font-label-caps text-label-caps text-on-surface-variant uppercase">RabbitMQ</span>
+                    <span
+                        class="bg-surface-container-highest px-3 py-1 rounded-full font-label-caps text-label-caps text-on-surface-variant uppercase">MongoDB</span>
+                </div>
+                <div class="mt-auto pt-md border-t border-outline-variant/50 flex gap-sm">
+                    <a class="flex items-center gap-2 px-4 py-2 border border-outline-variant text-primary-container rounded-DEFAULT hover:bg-primary-container/10 transition-colors font-label-caps text-label-caps uppercase"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm">code</span>
+                        Código Fonte (GitHub)
+                    </a>
+                    <a class="flex items-center gap-2 px-4 py-2 text-outline hover:text-on-surface transition-colors font-label-caps text-label-caps uppercase"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm">architecture</span>
+                        Specs de Arquitetura
+                    </a>
+                </div>
+            </article>
+            <!-- Project Card 4 -->
+            <article
+                class="project-card bg-surface-container border border-outline-variant border-t-2 border-t-secondary-container rounded-lg p-md flex flex-col gap-md relative overflow-hidden group">
+                <div class="flex flex-col gap-xs">
+                    <h2 class="font-h2 text-h2 text-on-surface group-hover:text-primary-container transition-colors">
+                        Agendador de Tarefas Distribuído</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        Uma alternativa cron distribuída tolerante a falhas projetada para gerenciar e executar trabalhos agendados em um cluster de nós, garantindo que não haja execuções perdidas ou duplicadas.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-xs">
+                    <span
+                        class="bg-surface-container-highest px-3 py-1 rounded-full font-label-caps text-label-caps text-on-surface-variant uppercase">Quartz</span>
+                    <span
+                        class="bg-surface-container-highest px-3 py-1 rounded-full font-label-caps text-label-caps text-on-surface-variant uppercase">Zookeeper</span>
+                    <span
+                        class="bg-surface-container-highest px-3 py-1 rounded-full font-label-caps text-label-caps text-on-surface-variant uppercase">MySQL</span>
+                    <span
+                        class="bg-surface-container-highest px-3 py-1 rounded-full font-label-caps text-label-caps text-on-surface-variant uppercase">gRPC</span>
+                </div>
+                <div class="mt-auto pt-md border-t border-outline-variant/50 flex gap-sm">
+                    <a class="flex items-center gap-2 px-4 py-2 border border-outline-variant text-primary-container rounded-DEFAULT hover:bg-primary-container/10 transition-colors font-label-caps text-label-caps uppercase"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm">code</span>
+                        Código Fonte (GitHub)
+                    </a>
+                    <a class="flex items-center gap-2 px-4 py-2 text-outline hover:text-on-surface transition-colors font-label-caps text-label-caps uppercase"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm">description</span>
+                        Detalhes de Implementação
+                    </a>
+                </div>
+            </article>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full bg-[#0D1117] border-t border-[#30363D] font-space-grotesk mt-auto">
+        <div class="max-w-[1200px] mx-auto px-6 md:px-12 py-10 md:py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0">
+                <!-- Branding -->
+                <div class="flex flex-col items-center md:items-start gap-1">
+                    <div class="text-lg font-bold tracking-widest text-slate-100">WELLINGTON COSTA</div>
+                    <div class="text-[10px] text-[#58A6FF] font-mono tracking-tighter opacity-70">java.version: 21.0.1</div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="order-3 md:order-2 text-[#8B949E] text-xs md:text-sm text-center font-mono">
+                    <span class="hidden md:inline">© 2024 System.out.println('Portfolio'); | Construído para Performance</span>
+                    <span class="md:hidden">© 2024 System.out.println('Portfolio');</span>
+                </div>
+
+                <!-- Socials -->
+                <div class="order-2 md:order-3 flex items-center gap-6">
+                    <a class="text-slate-400 hover:text-[#58A6FF] transition-all duration-300" href="https://github.com/WellSCosta">
+                        <span class="md:hidden text-xs font-bold border border-slate-700 px-3 py-1 rounded-full">GITHUB</span>
+                        <span class="hidden md:inline">GitHub</span>
+                    </a>
+                    <a class="text-slate-400 hover:text-[#58A6FF] transition-all duration-300" href="https://www.linkedin.com/in/wellcosta-dev/">
+                        <span class="md:hidden text-xs font-bold border border-slate-700 px-3 py-1 rounded-full">LINKEDIN</span>
+                        <span class="hidden md:inline">LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const toggle = document.getElementById('mobile-menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+        if (toggle && menu) {
+            toggle.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                const icon = toggle.querySelector('.material-symbols-outlined');
+                icon.innerText = menu.classList.contains('hidden') ? 'menu' : 'close';
+            });
+        }
+
+        // Project Highlight Mobile
+        const projectCards = document.querySelectorAll('.project-card');
+        if (projectCards.length > 0 && window.innerWidth < 768) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('mobile-project-active');
+                    } else {
+                        entry.target.classList.remove('mobile-project-active');
+                    }
+                });
+            }, { 
+                threshold: 0.6, // Higher threshold so it highlights when well centered
+                rootMargin: "-10% 0px -10% 0px"
+            });
+            projectCards.forEach(card => observer.observe(card));
+        }
+    </script>
+</body>
+
+</html>
