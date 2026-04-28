@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Portfólio de Desenvolvedor Java Backend</title>
+    <title>Wellington Costa - Desenvolvedor Java</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
@@ -175,51 +175,55 @@
 <body class="antialiased min-h-screen flex flex-col font-body-md text-body-md bg-[#0b141c] text-slate-200">
     <!-- TopNavBar Shared Component -->
     <header class="fixed top-0 left-0 w-full z-50 bg-[#0D1117] border-b border-[#30363D]">
-        <div class="max-w-[1200px] mx-auto flex justify-between items-center px-6 md:px-12 py-4 font-space-grotesk tracking-tight">
+        <div
+            class="max-w-[1200px] mx-auto flex justify-between items-center px-6 md:px-12 py-4 font-space-grotesk tracking-tight">
             <div class="text-xl font-bold tracking-widest text-[#58A6FF]">
                 WELLINGTON COSTA
             </div>
-        <nav class="hidden md:flex items-center gap-6">
-            <a class="text-[#58A6FF] border-b-2 border-[#58A6FF] pb-1 hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
-                href="index.html">Início</a>
-            <a class="text-slate-300 font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
-                href="about.html">Sobre</a>
-            <a class="text-slate-300 font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
-                href="projects.html">Projetos</a>
-            <a class="text-slate-300 font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
-                href="skills.html">Habilidades</a>
-            <a class="text-slate-300 font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
-                href="contact.html">Contato</a>
-        </nav>
-        <div class="flex items-center gap-4">
-            <div class="hidden sm:flex items-center gap-3">
-                <button
-                    class="text-slate-300 hover:text-white transition-colors duration-200 flex items-center justify-center">
-                    <span class="material-symbols-outlined" data-icon="terminal">terminal</span>
-                </button>
-                <button
-                    class="text-slate-300 hover:text-white transition-colors duration-200 flex items-center justify-center">
-                    <span class="material-symbols-outlined" data-icon="code">code</span>
+            <nav class="hidden md:flex items-center gap-6">
+                <a class="text-[#58A6FF] border-b-2 border-[#58A6FF] pb-1 hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
+                    href="index.html">Início</a>
+                <a class="text-slate-300 font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
+                    href="about.html">Sobre</a>
+                <a class="text-slate-300 font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
+                    href="projects.html">Projetos</a>
+                <a class="text-slate-300 font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
+                    href="skills.html">Habilidades</a>
+                <a class="text-slate-300 font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
+                    href="contact.html">Contato</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <div class="hidden sm:flex items-center gap-3">
+                    <button
+                        class="text-slate-300 hover:text-white transition-colors duration-200 flex items-center justify-center">
+                        <span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+                    </button>
+                    <button
+                        class="text-slate-300 hover:text-white transition-colors duration-200 flex items-center justify-center">
+                        <span class="material-symbols-outlined" data-icon="code">code</span>
+                    </button>
+                </div>
+                <a href="contact.html"
+                    class="hidden sm:block bg-[#58A6FF] text-[#001c38] px-4 py-2 rounded-DEFAULT font-bold text-sm tracking-wide hover:bg-[#79b8ff] transition-colors">
+                    Entre em Contato
+                </a>
+                <button id="mobile-menu-toggle" class="md:hidden text-slate-300 hover:text-white transition-colors p-1">
+                    <span class="material-symbols-outlined">menu</span>
                 </button>
             </div>
-            <a href="contact.html"
-                class="hidden sm:block bg-[#58A6FF] text-[#001c38] px-4 py-2 rounded-DEFAULT font-bold text-sm tracking-wide hover:bg-[#79b8ff] transition-colors">
-                Entre em Contato
-            </a>
-            <button id="mobile-menu-toggle" class="md:hidden text-slate-300 hover:text-white transition-colors p-1">
-                <span class="material-symbols-outlined">menu</span>
-            </button>
         </div>
-    </div>
-    <!-- Mobile Menu Drawer -->
-    <div id="mobile-menu" class="hidden md:hidden bg-[#0D1117] border-b border-[#30363D] py-6 px-6 flex flex-col gap-4 shadow-xl">
-        <a class="text-[#58A6FF] font-medium py-2 border-b border-white/5" href="index.html">Início</a>
-        <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="about.html">Sobre</a>
-        <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="projects.html">Projetos</a>
-        <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="skills.html">Habilidades</a>
-        <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="contact.html">Contato</a>
-        <a href="contact.html" class="sm:hidden bg-[#58A6FF] text-[#001c38] px-4 py-3 rounded-DEFAULT font-bold text-center mt-4">Entre em Contato</a>
-    </div>
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-[#0D1117] border-b border-[#30363D] py-6 px-6 flex flex-col gap-4 shadow-xl">
+            <a class="text-[#58A6FF] font-medium py-2 border-b border-white/5" href="index.html">Início</a>
+            <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="about.html">Sobre</a>
+            <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="projects.html">Projetos</a>
+            <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="skills.html">Habilidades</a>
+            <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="contact.html">Contato</a>
+            <a href="contact.html"
+                class="sm:hidden bg-[#58A6FF] text-[#001c38] px-4 py-3 rounded-DEFAULT font-bold text-center mt-4">Entre
+                em Contato</a>
+        </div>
     </header>
     <!-- Main Content Canvas -->
     <main class="flex-grow flex flex-col pt-[80px]">
@@ -235,13 +239,16 @@
                     <div
                         class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container border border-outline-variant">
                         <span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
-                        <span class="font-label-caps text-label-caps text-slate-200 uppercase tracking-wider">Status do Sistema: Online</span>
+                        <span class="font-label-caps text-label-caps text-slate-200 uppercase tracking-wider">Status do
+                            Sistema: Online</span>
                     </div>
                     <h1 class="font-display text-4xl sm:text-5xl lg:text-display text-white leading-tight">
                         Construindo Sistemas <span class="text-[#58A6FF]">Backend Robustos</span> e Escaláveis
                     </h1>
                     <p class="font-body-lg text-body-lg text-slate-300 max-w-lg">
-                        Desenvolvedor Java Backend em início de carreira, focado em Spring Boot e boas práticas de desenvolvimento. Dedicado a construir APIs eficientes e aprender novas tecnologias para criar soluções escaláveis.
+                        Desenvolvedor Java Backend em início de carreira, focado em Spring Boot e boas práticas de
+                        desenvolvimento. Dedicado a construir APIs eficientes e aprender novas tecnologias para criar
+                        soluções escaláveis.
                     </p>
                     <div class="flex flex-wrap gap-sm pt-4">
                         <a href="projects.html"
@@ -275,7 +282,7 @@
                                 <span class="material-symbols-outlined text-sm">content_copy</span>
                             </div>
                         </div>
-                        
+
                         <div class="md:hidden p-6 flex flex-col bg-[#060f16]">
                             <pre id="mobile-code" class="font-code-block text-sm leading-relaxed w-full opacity-0">
 <span class="text-[#58A6FF]">public class</span> <span class="text-slate-200">Wellington</span> {
@@ -315,7 +322,7 @@
                         </div>
                     </div>
                 </div>
-                </div>
+            </div>
             </div>
         </section>
     </main>
@@ -326,23 +333,29 @@
                 <!-- Branding -->
                 <div class="flex flex-col items-center md:items-start gap-1">
                     <div class="text-lg font-bold tracking-widest text-slate-100">WELLINGTON COSTA</div>
-                    <div class="text-[10px] text-[#58A6FF] font-mono tracking-tighter opacity-70">java.version: 21.0.1</div>
+                    <div class="text-[10px] text-[#58A6FF] font-mono tracking-tighter opacity-70">java.version: 21.0.1
+                    </div>
                 </div>
 
                 <!-- Copyright -->
                 <div class="order-3 md:order-2 text-[#8B949E] text-xs md:text-sm text-center font-mono">
-                    <span class="hidden md:inline">© 2024 System.out.println('Portfolio'); | Construído para Performance</span>
+                    <span class="hidden md:inline">© 2024 System.out.println('Portfolio'); | Construído para
+                        Performance</span>
                     <span class="md:hidden">© 2024 System.out.println('Portfolio');</span>
                 </div>
 
                 <!-- Socials -->
                 <div class="order-2 md:order-3 flex items-center gap-6">
-                    <a class="text-slate-400 hover:text-[#58A6FF] transition-all duration-300" href="https://github.com/WellSCosta">
-                        <span class="md:hidden text-xs font-bold border border-slate-700 px-3 py-1 rounded-full">GITHUB</span>
+                    <a class="text-slate-400 hover:text-[#58A6FF] transition-all duration-300"
+                        href="https://github.com/WellSCosta">
+                        <span
+                            class="md:hidden text-xs font-bold border border-slate-700 px-3 py-1 rounded-full">GITHUB</span>
                         <span class="hidden md:inline">GitHub</span>
                     </a>
-                    <a class="text-slate-400 hover:text-[#58A6FF] transition-all duration-300" href="https://www.linkedin.com/in/wellcosta-dev/">
-                        <span class="md:hidden text-xs font-bold border border-slate-700 px-3 py-1 rounded-full">LINKEDIN</span>
+                    <a class="text-slate-400 hover:text-[#58A6FF] transition-all duration-300"
+                        href="https://www.linkedin.com/in/wellcosta-dev/">
+                        <span
+                            class="md:hidden text-xs font-bold border border-slate-700 px-3 py-1 rounded-full">LINKEDIN</span>
                         <span class="hidden md:inline">LinkedIn</span>
                     </a>
                 </div>
@@ -367,7 +380,7 @@
             const fullHtml = element.innerHTML;
             element.innerHTML = '';
             element.style.opacity = '1';
-            
+
             let i = 0;
             let currentHtml = '';
 
@@ -400,7 +413,7 @@
         function startAnimations() {
             const desktopCode = document.getElementById('desktop-code');
             const mobileCode = document.getElementById('mobile-code');
-            
+
             if (window.innerWidth >= 1024) {
                 if (desktopCode) typeWriter(desktopCode);
             } else if (mobileCode) {

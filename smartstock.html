@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SmartStock AI | Detalhes do Projeto</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#c2c7d0",
+                        "on-secondary-fixed-variant": "#693c00",
+                        "on-primary-fixed": "#001c38",
+                        "error-container": "#93000a",
+                        "surface-container-lowest": "#060f16",
+                        "surface-tint": "#a2c9ff",
+                        "primary-fixed": "#d3e4ff",
+                        "surface-dim": "#0b141c",
+                        "on-surface-variant": "#c0c7d4",
+                        "on-tertiary-fixed-variant": "#42474f",
+                        "on-background": "#dae3ee",
+                        "on-secondary-container": "#4d2b00",
+                        "on-error": "#690005",
+                        "surface-container-low": "#141c24",
+                        "surface-container-highest": "#2d363e",
+                        "tertiary": "#c2c7d0",
+                        "on-secondary": "#4a2800",
+                        "surface-container-high": "#222b33",
+                        "surface-container": "#182028",
+                        "on-secondary-fixed": "#2c1600",
+                        "secondary-fixed-dim": "#ffb870",
+                        "tertiary-fixed": "#dee2ec",
+                        "on-tertiary-container": "#353a41",
+                        "surface": "#0b141c",
+                        "primary-fixed-dim": "#a2c9ff",
+                        "on-primary-fixed-variant": "#004882",
+                        "inverse-surface": "#dae3ee",
+                        "error": "#ffb4ab",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#171c23",
+                        "on-primary": "#00315c",
+                        "inverse-primary": "#0060aa",
+                        "on-surface": "#dae3ee",
+                        "outline-variant": "#414752",
+                        "secondary-fixed": "#ffdcbe",
+                        "on-tertiary": "#2c3138",
+                        "tertiary-container": "#9fa3ac",
+                        "secondary": "#ffb870",
+                        "outline": "#8b919d",
+                        "surface-bright": "#313a43",
+                        "primary": "#a2c9ff",
+                        "on-primary-container": "#003a6b",
+                        "primary-container": "#58a6ff",
+                        "surface-variant": "#2d363e",
+                        "secondary-container": "#e18501",
+                        "inverse-on-surface": "#29313a",
+                        "background": "#0b141c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "lg": "48px",
+                        "container-max": "1200px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "xs": "4px",
+                        "md": "24px",
+                        "gutter": "24px",
+                        "xl": "80px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Space Grotesk"],
+                        "code-block": ["monospace"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "display": ["Space Grotesk"],
+                        "h2": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "h1": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "code-block": ["14px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display": ["48px", { "lineHeight": "1.1", "fontWeight": "700" }],
+                        "h2": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .bg-code-pattern {
+            background-image: radial-gradient(#2d363e 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        .glass-card {
+            background: rgba(24, 32, 40, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(65, 71, 82, 0.5);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md antialiased pt-20">
+    <!-- TopNavBar -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-[#0D1117] border-b border-[#30363D]">
+        <div class="max-w-[1200px] mx-auto flex justify-between items-center px-6 md:px-12 py-4 font-space-grotesk tracking-tight">
+            <div class="text-xl font-bold tracking-widest text-[#58A6FF]">WELLINGTON COSTA</div>
+            <div class="hidden md:flex gap-6 items-center">
+                <a class="text-[#8B949E] font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
+                    href="index.html">Início</a>
+                <a class="text-[#8B949E] font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
+                    href="about.html">Sobre</a>
+                <a class="text-[#58A6FF] border-b-2 border-[#58A6FF] pb-1 hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
+                    href="projects.html">Projetos</a>
+                <a class="text-[#8B949E] font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
+                    href="skills.html">Habilidades</a>
+                <a class="text-[#8B949E] font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
+                    href="contact.html">Contato</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="hidden md:flex gap-2">
+                    <span class="material-symbols-outlined text-[#8B949E] hover:text-white transition-colors cursor-pointer">terminal</span>
+                    <span class="material-symbols-outlined text-[#8B949E] hover:text-white transition-colors cursor-pointer">code</span>
+                </div>
+                <a href="contact.html"
+                    class="hidden sm:block bg-[#58A6FF] text-[#0D1117] px-4 py-2 rounded-DEFAULT font-space-grotesk font-bold hover:bg-white transition-colors active:scale-95">Contato</a>
+                <button id="mobile-menu-toggle" class="md:hidden text-slate-300 hover:text-white transition-colors p-1">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0D1117] border-b border-[#30363D] py-6 px-6 flex flex-col gap-4 shadow-xl">
+            <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="index.html">Início</a>
+            <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="about.html">Sobre</a>
+            <a class="text-[#58A6FF] font-medium py-2 border-b border-white/5" href="projects.html">Projetos</a>
+            <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="skills.html">Habilidades</a>
+            <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="contact.html">Contato</a>
+            <a href="contact.html" class="sm:hidden bg-[#58A6FF] text-[#001c38] px-4 py-3 rounded-DEFAULT font-bold text-center mt-4">Entre em Contato</a>
+        </div>
+    </header>
+
+    <!-- Project Hero -->
+    <section class="relative py-20 overflow-hidden border-b border-outline-variant bg-surface-container-lowest">
+        <div class="absolute inset-0 bg-code-pattern opacity-10 pointer-events-none"></div>
+        <div class="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10">
+            <div class="flex flex-col gap-md text-center md:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container/10 border border-secondary-container/20 w-fit mx-auto md:mx-0">
+                    <span class="material-symbols-outlined text-secondary-container text-sm">psychology</span>
+                    <span class="font-label-caps text-label-caps text-secondary-container uppercase tracking-wider">AI-Powered Backend</span>
+                </div>
+                <h1 class="font-display text-4xl sm:text-5xl lg:text-display text-white">SmartStock AI</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Uma solução avançada de gerenciamento de inventário que combina a robustez do Spring Boot 3 com o poder da Inteligência Artificial (Google Gemini via Spring AI) para oferecer insights preditivos e automação no controle de estoque.
+                </p>
+                <div class="flex flex-wrap gap-sm justify-center md:justify-start pt-4">
+                    <a href="https://github.com/WellSCosta/SmartStockAI" target="_blank"
+                        class="bg-[#58A6FF] text-[#001c38] px-6 py-3 rounded-DEFAULT font-bold flex items-center gap-2 hover:bg-[#79b8ff] transition-colors">
+                        <span class="material-symbols-outlined">code</span>
+                        Ver no GitHub
+                    </a>
+                    <a href="projects.html"
+                        class="border border-outline-variant text-on-surface px-6 py-3 rounded-DEFAULT font-bold flex items-center gap-2 hover:bg-surface-container transition-colors">
+                        <span class="material-symbols-outlined">arrow_back</span>
+                        Voltar para Projetos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details -->
+    <main class="flex-grow w-full max-w-[1200px] mx-auto px-6 md:px-12 py-12 flex flex-col gap-xl">
+        
+        <!-- Tech Stack Grid -->
+        <section class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-sm">
+            <div class="glass-card p-4 rounded-lg flex flex-col items-center gap-2 text-center group hover:border-secondary-container transition-colors">
+                <span class="font-label-caps text-[10px] text-slate-500 uppercase">Linguagem</span>
+                <span class="font-bold text-on-surface">Java 21</span>
+            </div>
+            <div class="glass-card p-4 rounded-lg flex flex-col items-center gap-2 text-center group hover:border-secondary-container transition-colors">
+                <span class="font-label-caps text-[10px] text-slate-500 uppercase">Framework</span>
+                <span class="font-bold text-on-surface">Spring Boot 3.3</span>
+            </div>
+            <div class="glass-card p-4 rounded-lg flex flex-col items-center gap-2 text-center group hover:border-secondary-container transition-colors">
+                <span class="font-label-caps text-[10px] text-slate-500 uppercase">Inteligência Artificial</span>
+                <span class="font-bold text-on-surface">Spring AI</span>
+            </div>
+            <div class="glass-card p-4 rounded-lg flex flex-col items-center gap-2 text-center group hover:border-secondary-container transition-colors">
+                <span class="font-label-caps text-[10px] text-slate-500 uppercase">Banco de Dados</span>
+                <span class="font-bold text-on-surface">PostgreSQL 16</span>
+            </div>
+            <div class="glass-card p-4 rounded-lg flex flex-col items-center gap-2 text-center group hover:border-secondary-container transition-colors">
+                <span class="font-label-caps text-[10px] text-slate-500 uppercase">Cache</span>
+                <span class="font-bold text-on-surface">Redis</span>
+            </div>
+            <div class="glass-card p-4 rounded-lg flex flex-col items-center gap-2 text-center group hover:border-secondary-container transition-colors">
+                <span class="font-label-caps text-[10px] text-slate-500 uppercase">Segurança</span>
+                <span class="font-bold text-on-surface">JWT (Auth0)</span>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="flex flex-col gap-lg">
+            <h2 class="font-h2 text-h2 text-white border-b border-outline-variant pb-2">Diferenciais e Funcionalidades</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+                <!-- Feature 1 -->
+                <div class="bg-surface-container p-md rounded-lg border border-outline-variant flex flex-col gap-sm">
+                    <div class="w-10 h-10 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary-container">
+                        <span class="material-symbols-outlined">auto_awesome</span>
+                    </div>
+                    <h3 class="font-bold text-lg text-white">IA Generativa</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">
+                        Sugestão automática de produtos a partir de descrições brutas e análise preditiva de estoque baseada em histórico real de 90 dias.
+                    </p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-surface-container p-md rounded-lg border border-outline-variant flex flex-col gap-sm">
+                    <div class="w-10 h-10 rounded-lg bg-secondary-container/10 flex items-center justify-center text-secondary-container">
+                        <span class="material-symbols-outlined">bolt</span>
+                    </div>
+                    <h3 class="font-bold text-lg text-white">Performance com Redis</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">
+                        Sistema de cache inteligente com invalidação automática para garantir que as consultas sejam ultra-rápidas sem comprometer a consistência.
+                    </p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-surface-container p-md rounded-lg border border-outline-variant flex flex-col gap-sm">
+                    <div class="w-10 h-10 rounded-lg bg-error-container/10 flex items-center justify-center text-error">
+                        <span class="material-symbols-outlined">lock</span>
+                    </div>
+                    <h3 class="font-bold text-lg text-white">Integridade e Concorrência</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">
+                        Implementação de Locks Otimistas via JPA (@Version) para evitar condições de corrida em ambientes de alta concorrência.
+                    </p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="bg-surface-container p-md rounded-lg border border-outline-variant flex flex-col gap-sm">
+                    <div class="w-10 h-10 rounded-lg bg-surface-tint/10 flex items-center justify-center text-surface-tint">
+                        <span class="material-symbols-outlined">api</span>
+                    </div>
+                    <h3 class="font-bold text-lg text-white">API RESTful Segura</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">
+                        Endpoints protegidos por JWT com controle de acesso baseado em roles (ADMIN/USER) e documentação Swagger interativa.
+                    </p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="bg-surface-container p-md rounded-lg border border-outline-variant flex flex-col gap-sm">
+                    <div class="w-10 h-10 rounded-lg bg-tertiary/10 flex items-center justify-center text-tertiary">
+                        <span class="material-symbols-outlined">menu_book</span>
+                    </div>
+                    <h3 class="font-bold text-lg text-white">Código Documentado</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">
+                        Uso extensivo de Javadoc em todas as camadas (Controllers, Services, Models) seguindo os princípios de Clean Code.
+                    </p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="bg-surface-container p-md rounded-lg border border-outline-variant flex flex-col gap-sm">
+                    <div class="w-10 h-10 rounded-lg bg-on-tertiary-fixed-variant/10 flex items-center justify-center text-on-tertiary-fixed-variant">
+                        <span class="material-symbols-outlined">inventory_2</span>
+                    </div>
+                    <h3 class="font-bold text-lg text-white">Gestão Completa</h3>
+                    <p class="text-sm text-on-surface-variant leading-relaxed">
+                        Controle total de produtos, categorias e movimentações de estoque (entrada/saída) com histórico auditável.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architecture Flow -->
+        <section class="flex flex-col gap-lg overflow-hidden">
+            <h2 class="font-h2 text-h2 text-white border-b border-outline-variant pb-2">Arquitetura e Fluxo Interativo</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-lg items-start">
+                <!-- Interactive Diagram Canvas -->
+                <div class="lg:col-span-8 bg-surface-container-lowest p-6 md:p-10 rounded-xl border border-outline-variant relative min-h-[400px] flex items-center justify-center overflow-hidden">
+                    <div class="absolute inset-0 bg-code-pattern opacity-5 pointer-events-none"></div>
+                    
+                    <!-- SVG for Connections and Particles -->
+                    <svg class="absolute inset-0 w-full h-full pointer-events-none" id="flow-svg">
+                        <defs>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <!-- Paths will be drawn by JS or kept static if simple -->
+                        <path id="path-client-security" d="M 120,200 L 280,200" stroke="rgba(88,166,255,0.2)" stroke-width="2" fill="none" />
+                        <path id="path-security-app" d="M 380,200 L 500,200" stroke="rgba(88,166,255,0.2)" stroke-width="2" fill="none" />
+                        <path id="path-app-redis" d="M 580,180 Q 650,120 720,120" stroke="rgba(88,166,255,0.2)" stroke-width="2" fill="none" />
+                        <path id="path-app-ai" d="M 600,200 L 720,200" stroke="rgba(88,166,255,0.2)" stroke-width="2" fill="none" />
+                        <path id="path-app-db" d="M 580,220 Q 650,280 720,280" stroke="rgba(88,166,255,0.2)" stroke-width="2" fill="none" />
+                        
+                        <!-- Animated Particle -->
+                        <circle id="particle" r="4" fill="#58A6FF" style="filter: url(#glow); display: none;">
+                            <animateMotion id="particle-anim" dur="1s" repeatCount="1" fill="freeze" begin="indefinite" />
+                        </circle>
+                    </svg>
+
+                    <div class="relative z-10 w-full flex flex-col gap-8 md:gap-16 items-center">
+                        <div class="flex flex-col md:flex-row items-center justify-between w-full max-w-3xl px-4 gap-12 md:gap-4">
+                            <!-- Node: Client -->
+                            <div class="flow-node group flex flex-col items-center gap-3" data-target="client">
+                                <div class="w-16 h-16 rounded-xl bg-surface-container border-2 border-outline-variant flex items-center justify-center group-hover:border-primary transition-all duration-300 cursor-pointer shadow-lg group-hover:shadow-primary/20">
+                                    <span class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">devices</span>
+                                </div>
+                                <span class="font-label-caps text-[10px] text-slate-400">Cliente</span>
+                            </div>
+
+                            <!-- Node: Security -->
+                            <div class="flow-node group flex flex-col items-center gap-3" data-target="security">
+                                <div class="w-20 h-20 rounded-xl bg-surface-container-high border-2 border-outline-variant flex items-center justify-center group-hover:border-error transition-all duration-300 cursor-pointer shadow-lg group-hover:shadow-error/20">
+                                    <span class="material-symbols-outlined text-4xl group-hover:rotate-12 transition-transform">verified_user</span>
+                                </div>
+                                <span class="font-label-caps text-[10px] text-slate-400">JWT Security</span>
+                            </div>
+
+                            <!-- Node: Core App -->
+                            <div class="flow-node group flex flex-col items-center gap-3" data-target="core">
+                                <div class="w-24 h-24 rounded-2xl bg-primary/10 border-2 border-primary/50 flex items-center justify-center group-hover:border-primary transition-all duration-300 cursor-pointer shadow-xl group-hover:shadow-primary/30 relative">
+                                    <div class="absolute inset-0 bg-primary/5 animate-pulse rounded-2xl"></div>
+                                    <span class="material-symbols-outlined text-5xl text-primary group-hover:scale-110 transition-transform relative z-10">settings_suggest</span>
+                                </div>
+                                <span class="font-label-caps text-[10px] text-primary font-bold">Spring Boot Core</span>
+                            </div>
+
+                            <!-- Resources Stack: Responsive Row/Col -->
+                            <div class="flex flex-row md:flex-col gap-6 md:gap-6 justify-center w-full md:w-auto border-t md:border-t-0 md:border-l border-outline-variant/30 pt-6 md:pt-0 md:pl-6">
+                                <div class="flow-node group flex flex-col md:flex-row items-center gap-2 md:gap-4" data-target="redis">
+                                    <div class="w-14 h-14 rounded-lg bg-surface-container border-2 border-outline-variant flex items-center justify-center group-hover:border-tertiary transition-all duration-300 cursor-pointer shadow-md">
+                                        <span class="material-symbols-outlined text-2xl">memory</span>
+                                    </div>
+                                    <span class="font-label-caps text-[8px] md:text-[10px] text-slate-400 text-center">Redis</span>
+                                </div>
+                                <div class="flow-node group flex flex-col md:flex-row items-center gap-2 md:gap-4" data-target="ai">
+                                    <div class="w-14 h-14 rounded-lg bg-surface-container border-2 border-outline-variant flex items-center justify-center group-hover:border-surface-tint transition-all duration-300 cursor-pointer shadow-md">
+                                        <span class="material-symbols-outlined text-2xl">psychology</span>
+                                    </div>
+                                    <span class="font-label-caps text-[8px] md:text-[10px] text-slate-400 text-center">AI</span>
+                                </div>
+                                <div class="flow-node group flex flex-col md:flex-row items-center gap-2 md:gap-4" data-target="db">
+                                    <div class="w-14 h-14 rounded-lg bg-surface-container border-2 border-outline-variant flex items-center justify-center group-hover:border-primary-container transition-all duration-300 cursor-pointer shadow-md">
+                                        <span class="material-symbols-outlined text-2xl">database</span>
+                                    </div>
+                                    <span class="font-label-caps text-[8px] md:text-[10px] text-slate-400 text-center">DB</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button id="simulate-btn" class="mt-4 bg-primary text-on-primary-container px-8 py-3 rounded-full font-bold text-sm hover:bg-white transition-all active:scale-95 flex items-center gap-2 shadow-lg shadow-primary/20 z-20">
+                            <span class="material-symbols-outlined text-sm">play_arrow</span>
+                            Simular Fluxo Completo
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Info Panel -->
+                <div class="lg:col-span-4 flex flex-col gap-md">
+                    <div id="info-card" class="bg-surface-container border border-outline-variant rounded-xl p-md h-full min-h-[200px] md:min-h-[300px] transition-all duration-300 relative overflow-hidden">
+                        <div id="info-default" class="flex flex-col gap-sm h-full justify-center text-center p-4">
+                            <span class="material-symbols-outlined text-4xl text-slate-500">info</span>
+                            <h3 class="font-bold text-white">Explore o Fluxo</h3>
+                            <p class="text-sm text-on-surface-variant">Passe o mouse sobre os componentes ou clique em "Simular" para entender como os dados trafegam pelo sistema.</p>
+                        </div>
+                        
+                        <div id="info-content" class="hidden flex flex-col gap-sm animate-in fade-in slide-in-from-right-4 duration-300">
+                            <header class="flex items-center gap-3 border-b border-outline-variant pb-3">
+                                <div id="info-icon-bg" class="p-2 rounded-lg bg-primary/10 text-primary">
+                                    <span id="info-icon" class="material-symbols-outlined">settings</span>
+                                </div>
+                                <h3 id="info-title" class="font-bold text-white text-lg">Componente</h3>
+                            </header>
+                            <div class="space-y-md mt-2">
+                                <p id="info-description" class="text-sm text-on-surface-variant leading-relaxed"></p>
+                                <div id="info-details" class="flex flex-col gap-2">
+                                    <!-- Details will be injected here -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Simulation Result Overlay -->
+                        <div id="simulation-result" class="hidden absolute inset-0 bg-surface-container z-20 p-md flex flex-col gap-md animate-in slide-in-from-bottom-8 duration-500">
+                            <header class="flex items-center justify-between border-b border-outline-variant pb-2">
+                                <h3 class="font-bold text-primary flex items-center gap-2 text-sm uppercase tracking-widest">
+                                    <span class="material-symbols-outlined text-sm">analytics</span>
+                                    Relatório de Fluxo
+                                </h3>
+                                <button id="close-result" class="text-slate-500 hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined text-sm">close</span>
+                                </button>
+                            </header>
+                            <div id="result-steps" class="flex flex-col gap-sm overflow-y-auto pr-2">
+                                <!-- Steps will be injected here -->
+                            </div>
+                            <div class="mt-auto pt-sm border-t border-outline-variant/30">
+                                <p id="result-summary" class="text-[10px] text-on-surface-variant font-mono leading-tight"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="bg-surface-container-high p-lg rounded-xl border border-outline-variant text-center flex flex-col items-center gap-md">
+            <h2 class="font-h2 text-2xl text-white">Gostou deste projeto?</h2>
+            <p class="text-on-surface-variant max-w-lg">
+                Este projeto demonstra minha capacidade de integrar tecnologias modernas como IA generativa em sistemas backend empresariais escaláveis.
+            </p>
+            <div class="flex gap-md">
+                <a href="contact.html" class="bg-[#58A6FF] text-[#0D1117] px-8 py-3 rounded-DEFAULT font-bold hover:bg-white transition-colors">Entre em Contato</a>
+                <a href="https://github.com/WellSCosta/SmartStockAI" class="border border-outline-variant px-8 py-3 rounded-DEFAULT font-bold hover:bg-surface-container transition-colors">Ver Código</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-[#0D1117] border-t border-[#30363D] font-space-grotesk mt-auto">
+        <div class="max-w-[1200px] mx-auto px-6 md:px-12 py-10 md:py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0">
+                <div class="flex flex-col items-center md:items-start gap-1">
+                    <div class="text-lg font-bold tracking-widest text-slate-100">WELLINGTON COSTA</div>
+                    <div class="text-[10px] text-[#58A6FF] font-mono tracking-tighter opacity-70">java.version: 21.0.1</div>
+                </div>
+                <div class="order-3 md:order-2 text-[#8B949E] text-xs md:text-sm text-center font-mono">
+                    <span class="hidden md:inline">© 2024 System.out.println('Portfolio'); | Construído para Performance</span>
+                    <span class="md:hidden">© 2024 System.out.println('Portfolio');</span>
+                </div>
+                <div class="order-2 md:order-3 flex items-center gap-6">
+                    <a class="text-slate-400 hover:text-[#58A6FF] transition-all duration-300" href="https://github.com/WellSCosta">
+                        <span class="md:hidden text-xs font-bold border border-slate-700 px-3 py-1 rounded-full">GITHUB</span>
+                        <span class="hidden md:inline">GitHub</span>
+                    </a>
+                    <a class="text-slate-400 hover:text-[#58A6FF] transition-all duration-300" href="https://www.linkedin.com/in/wellcosta-dev/">
+                        <span class="md:hidden text-xs font-bold border border-slate-700 px-3 py-1 rounded-full">LINKEDIN</span>
+                        <span class="hidden md:inline">LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('mobile-menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+        if (toggle && menu) {
+            toggle.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                const icon = toggle.querySelector('.material-symbols-outlined');
+                icon.innerText = menu.classList.contains('hidden') ? 'menu' : 'close';
+            });
+        }
+
+        // Interactive Architecture Logic
+        const nodes = document.querySelectorAll('.flow-node');
+        const infoDefault = document.getElementById('info-default');
+        const infoContent = document.getElementById('info-content');
+        const infoTitle = document.getElementById('info-title');
+        const infoDescription = document.getElementById('info-description');
+        const infoDetails = document.getElementById('info-details');
+        const infoIcon = document.getElementById('info-icon');
+        const infoIconBg = document.getElementById('info-icon-bg');
+        
+        const nodeData = {
+            client: {
+                title: "Frontend / Mobile",
+                icon: "devices",
+                color: "bg-primary/10 text-primary",
+                description: "O ponto de entrada do usuário. Realiza requisições REST autenticadas via JSON Web Token (JWT).",
+                details: ["Single Page Application (SPA)", "Auth0 Integration", "REST Client"]
+            },
+            security: {
+                title: "Security Filter",
+                icon: "verified_user",
+                color: "bg-error/10 text-error",
+                description: "Filtro customizado (OncePerRequestFilter) que valida a assinatura e expiração do JWT antes de liberar o acesso.",
+                details: ["Spring Security Chain", "Stateless Session", "Role-based Access"]
+            },
+            core: {
+                title: "Spring Boot Core",
+                icon: "settings_suggest",
+                color: "bg-primary/10 text-primary",
+                description: "Coração do sistema onde residem os Controllers e Services. Gerencia regras de negócio e orquestra outros serviços.",
+                details: ["Domain-Driven Design", "Optimistic Locking (@Version)", "JPA Auditing"]
+            },
+            redis: {
+                title: "Redis Cache",
+                icon: "memory",
+                color: "bg-tertiary/10 text-tertiary",
+                description: "Camada de cache distribuído que reduz drasticamente a latência em consultas de produtos frequentes.",
+                details: ["Cache-Aside Pattern", "Automatic Eviction", "High Performance"]
+            },
+            ai: {
+                title: "Google Gemini (Spring AI)",
+                icon: "psychology",
+                color: "bg-surface-tint/10 text-surface-tint",
+                description: "Serviço de IA que processa descrições brutas para sugestões e analisa históricos para previsões de estoque.",
+                details: ["Generative Insights", "Predictive Analysis", "Spring AI Integration"]
+            },
+            db: {
+                title: "PostgreSQL 16",
+                icon: "database",
+                color: "bg-primary-container/10 text-primary-container",
+                description: "Banco de dados relacional robusto que armazena o estado persistente do inventário e usuários.",
+                details: ["ACID Compliance", "Relational Mapping", "Audit Logs"]
+            }
+        };
+
+        // Path Calculation
+        function updatePaths() {
+            const container = document.querySelector('.lg\\:col-span-8');
+            const rect = container.getBoundingClientRect();
+            
+            const getPos = (id) => {
+                const el = document.querySelector(`[data-target="${id}"] .w-14, [data-target="${id}"] .w-16, [data-target="${id}"] .w-20, [data-target="${id}"] .w-24`);
+                const r = el.getBoundingClientRect();
+                return {
+                    x: r.left - rect.left + r.width / 2,
+                    y: r.top - rect.top + r.height / 2
+                };
+            };
+
+            const client = getPos('client');
+            const security = getPos('security');
+            const core = getPos('core');
+            const redis = getPos('redis');
+            const ai = getPos('ai');
+            const db = getPos('db');
+
+            document.getElementById('path-client-security').setAttribute('d', `M ${client.x},${client.y} L ${security.x},${security.y}`);
+            document.getElementById('path-security-app').setAttribute('d', `M ${security.x},${security.y} L ${core.x},${core.y}`);
+            document.getElementById('path-app-redis').setAttribute('d', `M ${core.x},${core.y} Q ${(core.x+redis.x)/2},${redis.y} ${redis.x},${redis.y}`);
+            document.getElementById('path-app-ai').setAttribute('d', `M ${core.x},${core.y} L ${ai.x},${ai.y}`);
+            document.getElementById('path-app-db').setAttribute('d', `M ${core.x},${core.y} Q ${(core.x+db.x)/2},${db.y} ${db.x},${db.y}`);
+        }
+
+        window.addEventListener('resize', updatePaths);
+        setTimeout(updatePaths, 100);
+
+        nodes.forEach(node => {
+            node.addEventListener('mouseenter', () => {
+                const target = node.dataset.target;
+                const data = nodeData[target];
+                
+                infoDefault.classList.add('hidden');
+                infoContent.classList.remove('hidden');
+                
+                infoTitle.innerText = data.title;
+                infoIcon.innerText = data.icon;
+                infoIconBg.className = `p-2 rounded-lg ${data.color}`;
+                infoDescription.innerText = data.description;
+                
+                infoDetails.innerHTML = data.details.map(detail => `
+                    <div class="flex items-center gap-2 text-xs text-on-surface-variant bg-surface-container-highest/50 px-2 py-1 rounded">
+                        <span class="w-1 h-1 rounded-full bg-primary"></span>
+                        ${detail}
+                    </div>
+                `).join('');
+            });
+        });
+
+        // Flow Simulation
+        const simulateBtn = document.getElementById('simulate-btn');
+        const particle = document.getElementById('particle');
+        const simulationResult = document.getElementById('simulation-result');
+        const resultSteps = document.getElementById('result-steps');
+        const resultSummary = document.getElementById('result-summary');
+        const closeResult = document.getElementById('close-result');
+
+        closeResult.addEventListener('click', () => {
+            simulationResult.classList.add('hidden');
+        });
+
+        async function runSimulation() {
+            simulateBtn.disabled = true;
+            simulateBtn.classList.add('opacity-50');
+            simulationResult.classList.add('hidden');
+            particle.style.display = 'block';
+            
+            const steps = [];
+
+            const runPath = (pathId, duration = 800) => {
+                return new Promise(resolve => {
+                    const anim = document.getElementById('particle-anim');
+                    anim.setAttribute('dur', `${duration}ms`);
+                    anim.setAttribute('path', document.querySelector(pathId).getAttribute('d'));
+                    anim.beginElement();
+                    setTimeout(resolve, duration);
+                });
+            };
+
+            const flashNode = (id, color) => {
+                const el = document.querySelector(`[data-target="${id}"] > div`);
+                const originalBorder = el.style.borderColor;
+                el.style.borderColor = color;
+                el.classList.add('scale-110');
+                setTimeout(() => {
+                    el.style.borderColor = originalBorder;
+                    el.classList.remove('scale-110');
+                }, 500);
+            };
+
+            const addStep = (title, desc, icon, colorClass) => {
+                steps.push(`
+                    <div class="flex gap-3 animate-in fade-in slide-in-from-right-4">
+                        <div class="mt-1 w-6 h-6 rounded bg-surface-container-highest flex items-center justify-center text-[10px] font-bold ${colorClass}">
+                            <span class="material-symbols-outlined text-xs">${icon}</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <h4 class="text-xs font-bold text-white leading-none">${title}</h4>
+                            <p class="text-[10px] text-on-surface-variant leading-tight mt-1">${desc}</p>
+                        </div>
+                    </div>
+                `);
+            };
+
+            // 1. Client to Security
+            addStep("Autenticação", "JWT validado pelo filtro de segurança da API.", "lock", "text-error");
+            await runPath('#path-client-security');
+            flashNode('security', '#ffb4ab'); // Flash red for security check
+
+            // 2. Security to Core
+            addStep("Orquestração", "Service layer processa a lógica de negócio principal.", "hub", "text-primary");
+            await runPath('#path-security-app');
+            flashNode('core', '#a2c9ff');
+
+            // 3. Core to Redis (CHECK FIRST)
+            addStep("Consulta Cache", "Buscando dados no Redis para máxima performance.", "speed", "text-tertiary");
+            await runPath('#path-app-redis', 600);
+            
+            // Randomly simulate Hit or Miss
+            const isCacheHit = Math.random() > 0.5;
+            
+            if (isCacheHit) {
+                addStep("CACHE HIT", "Informação encontrada no Redis. DB ignorada.", "done_all", "text-green-500");
+                flashNode('redis', '#22c55e'); // Hit
+                particle.setAttribute('fill', '#22c55e');
+                // Success path back
+                await runPath('#path-app-redis', 400); 
+            } else {
+                addStep("CACHE MISS", "Dado não está no Redis. Iniciando busca no PostgreSQL.", "close", "text-error");
+                flashNode('redis', '#93000a'); // Miss (Red flash)
+                // 4. Redis Miss -> Core to DB
+                await runPath('#path-app-db', 800);
+                addStep("Persistência", "Dados recuperados do PostgreSQL e atualizados no cache.", "database", "text-primary-container");
+                flashNode('db', '#58a6ff');
+            }
+
+            // 5. Final Step: Show AI insight if it's a complex request
+            const useAI = Math.random() > 0.6;
+            if (useAI) {
+                addStep("Inteligência Artificial", "Gemini AI gerou previsões de estoque para os próximos 30 dias.", "auto_awesome", "text-surface-tint");
+                await runPath('#path-app-ai', 1000);
+                flashNode('ai', '#ffb870');
+            }
+
+            particle.style.display = 'none';
+            particle.setAttribute('fill', '#58A6FF'); // Reset color
+            
+            // Show Result
+            resultSteps.innerHTML = steps.join('');
+            resultSummary.innerText = `>>> Fluxo finalizado em ${((steps.length * 800) / 1000).toFixed(2)}s | Status: 200 OK | ${isCacheHit ? 'CACHE_MODE: OPTIMIZED' : 'CACHE_MODE: RECOVERY'}`;
+            simulationResult.classList.remove('hidden');
+
+            simulateBtn.disabled = false;
+            simulateBtn.classList.remove('opacity-50');
+        }
+
+        simulateBtn.addEventListener('click', runSimulation);
+    </script>
+</body>
+
+</html>
