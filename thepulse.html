@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>SmartStock AI | Detalhes do Projeto</title>
+    <title>The Pulse | Detalhes do Projeto</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
@@ -187,15 +187,15 @@
         <div class="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10">
             <div class="flex flex-col gap-md text-center md:text-left">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container/10 border border-secondary-container/20 w-fit mx-auto md:mx-0">
-                    <span class="material-symbols-outlined text-secondary-container text-sm">psychology</span>
-                    <span class="font-label-caps text-label-caps text-secondary-container uppercase tracking-wider">AI-Powered Backend</span>
+                    <span class="material-symbols-outlined text-secondary-container text-sm">hub</span>
+                    <span class="font-label-caps text-label-caps text-secondary-container uppercase tracking-wider">Event-Driven Architecture</span>
                 </div>
-                <h1 class="font-display text-4xl sm:text-5xl lg:text-display text-white">SmartStock AI</h1>
+                <h1 class="font-display text-4xl sm:text-5xl lg:text-display text-white">The Pulse</h1>
                 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
-                    Uma solução avançada de gerenciamento de inventário que combina a robustez do Spring Boot 3 com o poder da Inteligência Artificial (Google Gemini via Spring AI) para oferecer insights preditivos e automação no controle de estoque.
+                    Um sistema de notificações distribuído de alta volumetria construído com base em eventos. Projetado para garantir a entrega de mensagens em escala através de processamento assíncrono com Apache Kafka e resiliência com estratégias de DLQ.
                 </p>
                 <div class="flex flex-wrap gap-sm justify-center md:justify-start pt-4">
-                    <a href="https://github.com/WellSCosta/SmartStockAI" target="_blank"
+                    <a href="https://github.com/WellSCosta/the-pulse" target="_blank"
                         class="bg-[#58A6FF] text-[#001c38] px-6 py-3 rounded-DEFAULT font-bold flex items-center gap-2 hover:bg-[#79b8ff] transition-colors">
                         <span class="material-symbols-outlined">code</span>
                         Ver no GitHub
@@ -221,23 +221,23 @@
             </div>
             <div class="glass-card p-4 rounded-lg flex flex-col items-center gap-2 text-center group hover:border-secondary-container transition-colors">
                 <span class="font-label-caps text-[10px] text-slate-500 uppercase">Framework</span>
-                <span class="font-bold text-on-surface">Spring Boot 3.3</span>
+                <span class="font-bold text-on-surface">Spring Boot 3.2</span>
             </div>
             <div class="glass-card p-4 rounded-lg flex flex-col items-center gap-2 text-center group hover:border-secondary-container transition-colors">
-                <span class="font-label-caps text-[10px] text-slate-500 uppercase">Inteligência Artificial</span>
-                <span class="font-bold text-on-surface">Spring AI</span>
+                <span class="font-label-caps text-[10px] text-slate-500 uppercase">Mensageria</span>
+                <span class="font-bold text-on-surface">Apache Kafka</span>
             </div>
             <div class="glass-card p-4 rounded-lg flex flex-col items-center gap-2 text-center group hover:border-secondary-container transition-colors">
                 <span class="font-label-caps text-[10px] text-slate-500 uppercase">Banco de Dados</span>
                 <span class="font-bold text-on-surface">PostgreSQL 16</span>
             </div>
             <div class="glass-card p-4 rounded-lg flex flex-col items-center gap-2 text-center group hover:border-secondary-container transition-colors">
-                <span class="font-label-caps text-[10px] text-slate-500 uppercase">Cache</span>
-                <span class="font-bold text-on-surface">Redis</span>
+                <span class="font-label-caps text-[10px] text-slate-500 uppercase">Containerização</span>
+                <span class="font-bold text-on-surface">Docker</span>
             </div>
             <div class="glass-card p-4 rounded-lg flex flex-col items-center gap-2 text-center group hover:border-secondary-container transition-colors">
-                <span class="font-label-caps text-[10px] text-slate-500 uppercase">Segurança</span>
-                <span class="font-bold text-on-surface">JWT (Auth0)</span>
+                <span class="font-label-caps text-[10px] text-slate-500 uppercase">Migrations</span>
+                <span class="font-bold text-on-surface">Flyway</span>
             </div>
         </section>
 
@@ -248,61 +248,61 @@
                 <!-- Feature 1 -->
                 <div class="bg-surface-container p-md rounded-lg border border-outline-variant flex flex-col gap-sm">
                     <div class="w-10 h-10 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary-container">
-                        <span class="material-symbols-outlined">auto_awesome</span>
+                        <span class="material-symbols-outlined">bolt</span>
                     </div>
-                    <h3 class="font-bold text-lg text-white">IA Generativa</h3>
+                    <h3 class="font-bold text-lg text-white">Processamento Assíncrono</h3>
                     <p class="text-sm text-on-surface-variant leading-relaxed">
-                        Sugestão automática de produtos a partir de descrições brutas e análise preditiva de estoque baseada em histórico real de 90 dias.
+                        Produtor e Consumidor completamente desacoplados através do Apache Kafka, permitindo alta escalabilidade e vazão de mensagens.
                     </p>
                 </div>
                 <!-- Feature 2 -->
                 <div class="bg-surface-container p-md rounded-lg border border-outline-variant flex flex-col gap-sm">
                     <div class="w-10 h-10 rounded-lg bg-secondary-container/10 flex items-center justify-center text-secondary-container">
-                        <span class="material-symbols-outlined">bolt</span>
+                        <span class="material-symbols-outlined">sync</span>
                     </div>
-                    <h3 class="font-bold text-lg text-white">Performance com Redis</h3>
+                    <h3 class="font-bold text-lg text-white">Resiliência e DLQ</h3>
                     <p class="text-sm text-on-surface-variant leading-relaxed">
-                        Sistema de cache inteligente com invalidação automática para garantir que as consultas sejam ultra-rápidas sem comprometer a consistência.
+                        Configuração avançada de retentativas com Exponential Backoff e uso de Dead Letter Queue para tratar mensagens com falhas críticas.
                     </p>
                 </div>
                 <!-- Feature 3 -->
                 <div class="bg-surface-container p-md rounded-lg border border-outline-variant flex flex-col gap-sm">
                     <div class="w-10 h-10 rounded-lg bg-error-container/10 flex items-center justify-center text-error">
-                        <span class="material-symbols-outlined">lock</span>
+                        <span class="material-symbols-outlined">route</span>
                     </div>
-                    <h3 class="font-bold text-lg text-white">Integridade e Concorrência</h3>
+                    <h3 class="font-bold text-lg text-white">Rastreabilidade (Tracing)</h3>
                     <p class="text-sm text-on-surface-variant leading-relaxed">
-                        Implementação de Locks Otimistas via JPA (@Version) para evitar condições de corrida em ambientes de alta concorrência.
+                        Injeção de correlationId nos headers das mensagens Kafka para rastreamento completo de ponta a ponta em sistemas distribuídos.
                     </p>
                 </div>
                 <!-- Feature 4 -->
                 <div class="bg-surface-container p-md rounded-lg border border-outline-variant flex flex-col gap-sm">
                     <div class="w-10 h-10 rounded-lg bg-surface-tint/10 flex items-center justify-center text-surface-tint">
-                        <span class="material-symbols-outlined">api</span>
+                        <span class="material-symbols-outlined">rule</span>
                     </div>
-                    <h3 class="font-bold text-lg text-white">API RESTful Segura</h3>
+                    <h3 class="font-bold text-lg text-white">Validação bean (JSR 380)</h3>
                     <p class="text-sm text-on-surface-variant leading-relaxed">
-                        Endpoints protegidos por JWT com controle de acesso baseado em roles (ADMIN/USER) e documentação Swagger interativa.
+                        Payloads validados na entrada com feedback claro de falhas através de um Global Exception Handler padronizado.
                     </p>
                 </div>
                 <!-- Feature 5 -->
                 <div class="bg-surface-container p-md rounded-lg border border-outline-variant flex flex-col gap-sm">
                     <div class="w-10 h-10 rounded-lg bg-tertiary/10 flex items-center justify-center text-tertiary">
-                        <span class="material-symbols-outlined">menu_book</span>
+                        <span class="material-symbols-outlined">checklist</span>
                     </div>
-                    <h3 class="font-bold text-lg text-white">Código Documentado</h3>
+                    <h3 class="font-bold text-lg text-white">Testes Automatizados</h3>
                     <p class="text-sm text-on-surface-variant leading-relaxed">
-                        Uso extensivo de Javadoc em todas as camadas (Controllers, Services, Models) seguindo os princípios de Clean Code.
+                        Ampla cobertura de testes de unidade com JUnit 5 e Mockito, garantindo a estabilidade das regras de negócio.
                     </p>
                 </div>
                 <!-- Feature 6 -->
                 <div class="bg-surface-container p-md rounded-lg border border-outline-variant flex flex-col gap-sm">
                     <div class="w-10 h-10 rounded-lg bg-on-tertiary-fixed-variant/10 flex items-center justify-center text-on-tertiary-fixed-variant">
-                        <span class="material-symbols-outlined">inventory_2</span>
+                        <span class="material-symbols-outlined">database</span>
                     </div>
-                    <h3 class="font-bold text-lg text-white">Gestão Completa</h3>
+                    <h3 class="font-bold text-lg text-white">Persistência Confiável</h3>
                     <p class="text-sm text-on-surface-variant leading-relaxed">
-                        Controle total de produtos, categorias e movimentações de estoque (entrada/saída) com histórico auditável.
+                        Log de notificações persistido em PostgreSQL com controle automático de migrações de esquema via Flyway.
                     </p>
                 </div>
             </div>
@@ -318,7 +318,7 @@
                     <div class="absolute inset-0 bg-code-pattern opacity-5 pointer-events-none"></div>
                     
                     <!-- SVG for Connections and Particles -->
-                    <svg class="absolute inset-0 w-full h-full pointer-events-none" id="flow-svg">
+                    <svg class="absolute inset-0 w-full h-full pointer-events-none z-0" id="flow-svg">
                         <defs>
                             <filter id="glow">
                                 <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
@@ -328,12 +328,12 @@
                                 </feMerge>
                             </filter>
                         </defs>
-                        <!-- Paths will be drawn by JS or kept static if simple -->
-                        <path id="path-client-security" d="M 120,200 L 280,200" stroke="rgba(88,166,255,0.2)" stroke-width="2" fill="none" />
-                        <path id="path-security-app" d="M 380,200 L 500,200" stroke="rgba(88,166,255,0.2)" stroke-width="2" fill="none" />
-                        <path id="path-app-redis" d="M 580,180 Q 650,120 720,120" stroke="rgba(88,166,255,0.2)" stroke-width="2" fill="none" />
-                        <path id="path-app-ai" d="M 600,200 L 720,200" stroke="rgba(88,166,255,0.2)" stroke-width="2" fill="none" />
-                        <path id="path-app-db" d="M 580,220 Q 650,280 720,280" stroke="rgba(88,166,255,0.2)" stroke-width="2" fill="none" />
+                        <!-- Paths will be drawn by JS -->
+                        <path id="path-client-producer" d="" stroke="rgba(88,166,255,0.2)" stroke-width="2" fill="none" />
+                        <path id="path-producer-kafka" d="" stroke="rgba(88,166,255,0.2)" stroke-width="2" fill="none" />
+                        <path id="path-kafka-consumer" d="" stroke="rgba(88,166,255,0.2)" stroke-width="2" fill="none" />
+                        <path id="path-consumer-db" d="" stroke="rgba(88,166,255,0.2)" stroke-width="2" fill="none" />
+                        <path id="path-consumer-dlq" d="" stroke="rgba(244,67,54,0.2)" stroke-width="2" fill="none" />
                         
                         <!-- Animated Particle -->
                         <circle id="particle" r="4" fill="#58A6FF" style="filter: url(#glow); display: none;">
@@ -341,68 +341,66 @@
                         </circle>
                     </svg>
 
-                    <div class="relative z-10 w-full flex flex-col gap-6 md:gap-16 items-center">
-                        <div class="flex flex-col md:flex-row items-center justify-between w-full max-w-3xl px-4 gap-8 md:gap-4">
+                    <div class="relative z-20 w-full flex flex-col gap-6 md:gap-16 items-center">
+                        <div class="flex flex-col md:flex-row items-center justify-between w-full max-w-4xl px-4 gap-8 md:gap-4">
                             <!-- Node: Client -->
                             <div class="flow-node group flex flex-col items-center gap-2 md:gap-3" data-target="client">
                                 <div class="node-box w-12 h-12 md:w-16 md:h-16 rounded-xl bg-surface-container border-2 border-outline-variant flex items-center justify-center group-hover:border-primary transition-all duration-300 cursor-pointer shadow-lg group-hover:shadow-primary/20">
-                                    <span class="material-symbols-outlined text-2xl md:text-3xl group-hover:scale-110 transition-transform">devices</span>
+                                    <span class="material-symbols-outlined text-2xl md:text-3xl group-hover:scale-110 transition-transform">send</span>
                                 </div>
-                                <span class="font-label-caps text-[8px] md:text-[10px] text-slate-400">Cliente</span>
+                                <span class="font-label-caps text-[8px] md:text-[10px] text-slate-400">Origem</span>
                             </div>
 
-                            <!-- Node: Security -->
-                            <div class="flow-node group flex flex-col items-center gap-2 md:gap-3" data-target="security">
-                                <div class="node-box w-14 h-14 md:w-20 md:h-20 rounded-xl bg-surface-container-high border-2 border-outline-variant flex items-center justify-center group-hover:border-error transition-all duration-300 cursor-pointer shadow-lg group-hover:shadow-error/20">
-                                    <span class="material-symbols-outlined text-3xl md:text-4xl group-hover:rotate-12 transition-transform">verified_user</span>
+                            <!-- Node: Producer -->
+                            <div class="flow-node group flex flex-col items-center gap-2 md:gap-3" data-target="producer">
+                                <div class="node-box w-14 h-14 md:w-20 md:h-20 rounded-xl bg-surface-container-high border-2 border-outline-variant flex items-center justify-center group-hover:border-primary transition-all duration-300 cursor-pointer shadow-lg group-hover:shadow-primary/20">
+                                    <span class="material-symbols-outlined text-3xl md:text-4xl group-hover:rotate-12 transition-transform">input</span>
                                 </div>
-                                <span class="font-label-caps text-[8px] md:text-[10px] text-slate-400">JWT Security</span>
+                                <span class="font-label-caps text-[8px] md:text-[10px] text-slate-400">Producer API</span>
                             </div>
 
-                            <!-- Node: Core App -->
-                            <div class="flow-node group flex flex-col items-center gap-2 md:gap-3" data-target="core">
-                                <div class="node-box w-18 h-18 md:w-24 md:h-24 rounded-2xl bg-primary/10 border-2 border-primary/50 flex items-center justify-center group-hover:border-primary transition-all duration-300 cursor-pointer shadow-xl group-hover:shadow-primary/30 relative">
-                                    <div class="absolute inset-0 bg-primary/5 animate-pulse rounded-2xl"></div>
-                                    <span class="material-symbols-outlined text-4xl md:text-5xl text-primary group-hover:scale-110 transition-transform relative z-10">settings_suggest</span>
+                            <!-- Node: Kafka -->
+                            <div class="flow-node group flex flex-col items-center gap-2 md:gap-3" data-target="kafka">
+                                <div class="node-box w-18 h-18 md:w-24 md:h-24 rounded-2xl bg-surface-container border-2 border-secondary/50 flex items-center justify-center group-hover:border-secondary transition-all duration-300 cursor-pointer shadow-xl group-hover:shadow-secondary/30 relative">
+                                    <div class="absolute inset-0 bg-secondary/5 animate-pulse rounded-2xl"></div>
+                                    <span class="material-symbols-outlined text-4xl md:text-5xl text-secondary group-hover:scale-110 transition-transform relative z-10">reorder</span>
                                 </div>
-                                <span class="font-label-caps text-[8px] md:text-[10px] text-primary font-bold">Spring Boot Core</span>
+                                <span class="font-label-caps text-[8px] md:text-[10px] text-secondary font-bold text-center">Apache Kafka</span>
                             </div>
 
-                            <!-- Resources Stack: Responsive Row/Col -->
+                            <!-- Node: Consumer -->
+                            <div class="flow-node group flex flex-col items-center gap-2 md:gap-3" data-target="consumer">
+                                <div class="node-box w-14 h-14 md:w-20 md:h-20 rounded-xl bg-surface-container-high border-2 border-outline-variant flex items-center justify-center group-hover:border-primary transition-all duration-300 cursor-pointer shadow-lg group-hover:shadow-primary/20">
+                                    <span class="material-symbols-outlined text-3xl md:text-4xl group-hover:rotate-12 transition-transform">settings_input_component</span>
+                                </div>
+                                <span class="font-label-caps text-[8px] md:text-[10px] text-slate-400">Consumer Service</span>
+                            </div>
+
+                            <!-- Resources Stack -->
                             <div class="flex flex-row md:flex-col gap-4 md:gap-6 justify-center w-full md:w-auto border-t md:border-t-0 md:border-l border-outline-variant/30 pt-4 md:pt-0 md:pl-6">
-                                <div class="flow-node group flex flex-col md:flex-row items-center gap-2 md:gap-4" data-target="redis">
-                                    <div class="node-box w-10 h-10 md:w-14 md:h-14 rounded-lg bg-surface-container border-2 border-outline-variant flex items-center justify-center group-hover:border-tertiary transition-all duration-300 cursor-pointer shadow-md">
-                                        <span class="material-symbols-outlined text-xl md:text-2xl">memory</span>
-                                    </div>
-                                    <span class="font-label-caps text-[8px] md:text-[10px] text-slate-400 text-center">Redis</span>
-                                </div>
-                                <div class="flow-node group flex flex-col md:flex-row items-center gap-2 md:gap-4" data-target="ai">
-                                    <div class="node-box w-10 h-10 md:w-14 md:h-14 rounded-lg bg-surface-container border-2 border-outline-variant flex items-center justify-center group-hover:border-surface-tint transition-all duration-300 cursor-pointer shadow-md">
-                                        <span class="material-symbols-outlined text-xl md:text-2xl">psychology</span>
-                                    </div>
-                                    <span class="font-label-caps text-[8px] md:text-[10px] text-slate-400 text-center">AI</span>
-                                </div>
                                 <div class="flow-node group flex flex-col md:flex-row items-center gap-2 md:gap-4" data-target="db">
                                     <div class="node-box w-10 h-10 md:w-14 md:h-14 rounded-lg bg-surface-container border-2 border-outline-variant flex items-center justify-center group-hover:border-primary-container transition-all duration-300 cursor-pointer shadow-md">
                                         <span class="material-symbols-outlined text-xl md:text-2xl">database</span>
                                     </div>
-                                    <span class="font-label-caps text-[8px] md:text-[10px] text-slate-400 text-center">DB</span>
+                                    <span class="font-label-caps text-[8px] md:text-[10px] text-slate-400 text-center">PostgreSQL</span>
+                                </div>
+                                <div class="flow-node group flex flex-col md:flex-row items-center gap-2 md:gap-4" data-target="dlq">
+                                    <div class="node-box w-10 h-10 md:w-14 md:h-14 rounded-lg bg-surface-container border-2 border-outline-variant flex items-center justify-center group-hover:border-error transition-all duration-300 cursor-pointer shadow-md">
+                                        <span class="material-symbols-outlined text-xl md:text-2xl text-error">priority_high</span>
+                                    </div>
+                                    <span class="font-label-caps text-[8px] md:text-[10px] text-slate-400 text-center">DLQ</span>
                                 </div>
                             </div>
                         </div>
 
                         <div class="flex flex-row gap-2 md:gap-4 mt-4 justify-center z-20">
-                            <button data-type="hit" class="simulate-btn bg-primary text-on-primary-container px-3 py-2 md:px-6 md:py-3 rounded-full font-bold text-[10px] md:text-sm hover:bg-white transition-all active:scale-95 flex items-center gap-1 md:gap-2 shadow-lg shadow-primary/20">
-                                <span class="material-symbols-outlined text-xs md:text-sm">bolt</span>
-                                Hit
+                            <button data-type="success" class="simulate-btn bg-primary text-on-primary-container px-3 py-2 md:px-6 md:py-3 rounded-full font-bold text-[10px] md:text-sm hover:bg-white transition-all active:scale-95 flex items-center gap-1 md:gap-2 shadow-lg shadow-primary/20">
+                                <span class="material-symbols-outlined text-xs md:text-sm">done_all</span>
+                                Sucesso (DB)
                             </button>
-                            <button data-type="miss" class="simulate-btn border border-outline-variant text-on-surface px-3 py-2 md:px-6 md:py-3 rounded-full font-bold text-[10px] md:text-sm hover:bg-surface-container transition-all active:scale-95 flex items-center gap-1 md:gap-2 shadow-lg">
-                                <span class="material-symbols-outlined text-xs md:text-sm">database</span>
-                                Miss
-                            </button>
-                            <button data-type="ai" class="simulate-btn bg-secondary text-on-secondary-container px-3 py-2 md:px-6 md:py-3 rounded-full font-bold text-[10px] md:text-sm hover:bg-white transition-all active:scale-95 flex items-center gap-1 md:gap-2 shadow-lg shadow-secondary/20">
-                                <span class="material-symbols-outlined text-xs md:text-sm">auto_awesome</span>
-                                IA
+                            <button data-type="failure" class="simulate-btn border border-error text-error px-3 py-2 md:px-6 md:py-3 rounded-full font-bold text-[10px] md:text-sm hover:bg-error/10 transition-all active:scale-95 flex items-center gap-1 md:gap-2 shadow-lg z-20">
+                                <span class="material-symbols-outlined text-xs md:text-sm">error</span>
+                                Falha (DLQ)
                             </button>
                         </div>
                     </div>
@@ -414,7 +412,7 @@
                         <div id="info-default" class="flex flex-col gap-sm h-full justify-center text-center p-4">
                             <span class="material-symbols-outlined text-4xl text-slate-500">info</span>
                             <h3 class="font-bold text-white">Explore o Fluxo</h3>
-                            <p class="text-sm text-on-surface-variant">Passe o mouse sobre os componentes ou clique em "Simular" para entender como os dados trafegam pelo sistema.</p>
+                            <p class="text-sm text-on-surface-variant">Passe o mouse sobre os componentes ou clique em "Simular" para entender como as notificações são processadas.</p>
                         </div>
                         
                         <div id="info-content" class="hidden flex flex-col gap-sm animate-in fade-in slide-in-from-right-4 duration-300">
@@ -437,7 +435,7 @@
                             <header class="flex items-center justify-between border-b border-outline-variant pb-2">
                                 <h3 class="font-bold text-primary flex items-center gap-2 text-sm uppercase tracking-widest">
                                     <span class="material-symbols-outlined text-sm">analytics</span>
-                                    Relatório de Fluxo
+                                    Relatório de Evento
                                 </h3>
                                 <button id="close-result" class="text-slate-500 hover:text-white transition-colors">
                                     <span class="material-symbols-outlined text-sm">close</span>
@@ -457,13 +455,13 @@
 
         <!-- CTA -->
         <section class="bg-surface-container-high p-lg rounded-xl border border-outline-variant text-center flex flex-col items-center gap-md">
-            <h2 class="font-h2 text-2xl text-white">Gostou deste projeto?</h2>
+            <h2 class="font-h2 text-2xl text-white">Gostou desta arquitetura?</h2>
             <p class="text-on-surface-variant max-w-lg">
-                Este projeto demonstra minha capacidade de integrar tecnologias modernas como IA generativa em sistemas backend empresariais escaláveis.
+                The Pulse demonstra como construir sistemas resilientes e escaláveis utilizando os melhores padrões de mensageria e desacoplamento.
             </p>
             <div class="flex gap-md">
                 <a href="contact.html" class="bg-[#58A6FF] text-[#0D1117] px-8 py-3 rounded-DEFAULT font-bold hover:bg-white transition-colors">Entre em Contato</a>
-                <a href="https://github.com/WellSCosta/SmartStockAI" class="border border-outline-variant px-8 py-3 rounded-DEFAULT font-bold hover:bg-surface-container transition-colors">Ver Código</a>
+                <a href="https://github.com/WellSCosta/the-pulse" class="border border-outline-variant px-8 py-3 rounded-DEFAULT font-bold hover:bg-surface-container transition-colors">Ver Código</a>
             </div>
         </section>
 
@@ -518,46 +516,46 @@
         
         const nodeData = {
             client: {
-                title: "Frontend / Mobile",
-                icon: "devices",
+                title: "Client / Source",
+                icon: "send",
                 color: "bg-primary/10 text-primary",
-                description: "O ponto de entrada do usuário. Realiza requisições REST autenticadas via JSON Web Token (JWT).",
-                details: ["Single Page Application (SPA)", "Auth0 Integration", "REST Client"]
+                description: "Qualquer serviço ou cliente que dispara uma intenção de notificação via API REST.",
+                details: ["HTTP POST Request", "JSON Payload", "Correlation-Id Injection"]
             },
-            security: {
-                title: "Security Filter",
-                icon: "verified_user",
-                color: "bg-error/10 text-error",
-                description: "Filtro customizado (OncePerRequestFilter) que valida a assinatura e expiração do JWT antes de liberar o acesso.",
-                details: ["Spring Security Chain", "Stateless Session", "Role-based Access"]
-            },
-            core: {
-                title: "Spring Boot Core",
-                icon: "settings_suggest",
+            producer: {
+                title: "Producer Service",
+                icon: "input",
                 color: "bg-primary/10 text-primary",
-                description: "Coração do sistema onde residem os Controllers e Services. Gerencia regras de negócio e orquestra outros serviços.",
-                details: ["Domain-Driven Design", "Optimistic Locking (@Version)", "JPA Auditing"]
+                description: "Recebe o payload, valida os dados e publica o evento no tópico correspondente do Kafka.",
+                details: ["Spring Cloud Stream", "Validation (JSR 380)", "Non-blocking Entry"]
             },
-            redis: {
-                title: "Redis Cache",
-                icon: "memory",
-                color: "bg-tertiary/10 text-tertiary",
-                description: "Camada de cache distribuído que reduz drasticamente a latência em consultas de produtos frequentes.",
-                details: ["Cache-Aside Pattern", "Automatic Eviction", "High Performance"]
+            kafka: {
+                title: "Apache Kafka",
+                icon: "reorder",
+                color: "bg-secondary/10 text-secondary",
+                description: "Broker de mensagens distribuído que atua como o sistema nervoso central, garantindo durabilidade e ordem.",
+                details: ["High Throughput", "Message Partitioning", "Fault Tolerance"]
             },
-            ai: {
-                title: "Google Gemini (Spring AI)",
-                icon: "psychology",
-                color: "bg-surface-tint/10 text-surface-tint",
-                description: "Serviço de IA que processa descrições brutas para sugestões e analisa históricos para previsões de estoque.",
-                details: ["Generative Insights", "Predictive Analysis", "Spring AI Integration"]
+            consumer: {
+                title: "Consumer Service",
+                icon: "settings_input_component",
+                color: "bg-primary/10 text-primary",
+                description: "Lê as mensagens do Kafka de forma assíncrona, processa a lógica de entrega e persiste o status.",
+                details: ["Functional Consumer", "Retry Logic", "Idempotent Processing"]
             },
             db: {
                 title: "PostgreSQL 16",
                 icon: "database",
                 color: "bg-primary-container/10 text-primary-container",
-                description: "Banco de dados relacional robusto que armazena o estado persistente do inventário e usuários.",
-                details: ["ACID Compliance", "Relational Mapping", "Audit Logs"]
+                description: "Armazena o log definitivo das notificações e seus estados de entrega para auditoria.",
+                details: ["Persistence Layer", "Flyway Migrations", "Audit Logging"]
+            },
+            dlq: {
+                title: "Dead Letter Queue",
+                icon: "priority_high",
+                color: "bg-error/10 text-error",
+                description: "Tópico especial para onde mensagens 'envenenadas' ou que falharam após todas as tentativas são movidas.",
+                details: ["Manual Intervention", "Failure Analysis", "Poison Pill Handling"]
             }
         };
 
@@ -576,17 +574,17 @@
             };
 
             const client = getPos('client');
-            const security = getPos('security');
-            const core = getPos('core');
-            const redis = getPos('redis');
-            const ai = getPos('ai');
+            const producer = getPos('producer');
+            const kafka = getPos('kafka');
+            const consumer = getPos('consumer');
             const db = getPos('db');
+            const dlq = getPos('dlq');
 
-            document.getElementById('path-client-security').setAttribute('d', `M ${client.x},${client.y} L ${security.x},${security.y}`);
-            document.getElementById('path-security-app').setAttribute('d', `M ${security.x},${security.y} L ${core.x},${core.y}`);
-            document.getElementById('path-app-redis').setAttribute('d', `M ${core.x},${core.y} Q ${(core.x+redis.x)/2},${redis.y} ${redis.x},${redis.y}`);
-            document.getElementById('path-app-ai').setAttribute('d', `M ${core.x},${core.y} L ${ai.x},${ai.y}`);
-            document.getElementById('path-app-db').setAttribute('d', `M ${core.x},${core.y} Q ${(core.x+db.x)/2},${db.y} ${db.x},${db.y}`);
+            document.getElementById('path-client-producer').setAttribute('d', `M ${client.x},${client.y} L ${producer.x},${producer.y}`);
+            document.getElementById('path-producer-kafka').setAttribute('d', `M ${producer.x},${producer.y} L ${kafka.x},${kafka.y}`);
+            document.getElementById('path-kafka-consumer').setAttribute('d', `M ${kafka.x},${kafka.y} L ${consumer.x},${consumer.y}`);
+            document.getElementById('path-consumer-db').setAttribute('d', `M ${consumer.x},${consumer.y} Q ${(consumer.x+db.x)/2},${db.y} ${db.x},${db.y}`);
+            document.getElementById('path-consumer-dlq').setAttribute('d', `M ${consumer.x},${consumer.y} Q ${(consumer.x+dlq.x)/2},${dlq.y} ${dlq.x},${dlq.y}`);
         }
 
         window.addEventListener('resize', updatePaths);
@@ -614,7 +612,6 @@
             });
         });
 
-        // Flow Simulation
         const simulateBtns = document.querySelectorAll('.simulate-btn');
         const particle = document.getElementById('particle');
         const simulationResult = document.getElementById('simulation-result');
@@ -672,44 +669,35 @@
                 `);
             };
 
-            // 1. Client to Security
-            addStep("Autenticação", "JWT validado pelo filtro de segurança da API.", "lock", "text-error");
-            await runPath('#path-client-security');
-            flashNode('security', '#ffb4ab'); // Flash red for security check
+            // 1. Client to Producer
+            addStep("Início", "Requisição HTTP POST recebida pelo Producer Service.", "send", "text-primary");
+            await runPath('#path-client-producer');
+            flashNode('producer', '#a2c9ff');
 
-            // 2. Security to Core
-            addStep("Orquestração", "Service layer processa a lógica de negócio principal.", "hub", "text-primary");
-            await runPath('#path-security-app');
-            flashNode('core', '#a2c9ff');
+            // 2. Producer to Kafka
+            addStep("Publicação", "Evento serializado e publicado no tópico Kafka.", "publish", "text-primary");
+            await runPath('#path-producer-kafka');
+            flashNode('kafka', '#ffb870');
 
-            // 3. Core to Redis (CHECK FIRST)
-            addStep("Consulta Cache", "Buscando dados no Redis para máxima performance.", "speed", "text-tertiary");
-            await runPath('#path-app-redis', 600);
-            
+            // 3. Kafka to Consumer
+            addStep("Consumo", "Consumer Service detecta novo evento e inicia o processamento.", "download", "text-secondary");
+            await runPath('#path-kafka-consumer');
+            flashNode('consumer', '#a2c9ff');
+
             // Use provided type
-            const isCacheHit = type === 'hit' || type === 'ai';
+            const isSuccess = type === 'success';
             
-            if (isCacheHit) {
-                addStep("CACHE HIT", "Informação encontrada no Redis. DB ignorada.", "done_all", "text-green-500");
-                flashNode('redis', '#22c55e'); // Hit
-                particle.setAttribute('fill', '#22c55e');
-                // Success path back
-                await runPath('#path-app-redis', 400); 
-            } else {
-                addStep("CACHE MISS", "Dado não está no Redis. Iniciando busca no PostgreSQL.", "close", "text-error");
-                flashNode('redis', '#93000a'); // Miss (Red flash)
-                // 4. Redis Miss -> Core to DB
-                await runPath('#path-app-db', 800);
-                addStep("Persistência", "Dados recuperados do PostgreSQL e atualizados no cache.", "database", "text-primary-container");
+            if (isSuccess) {
+                // 4. Consumer to DB
+                addStep("Sucesso", "Notificação processada com sucesso e log persistido.", "done_all", "text-green-500");
+                await runPath('#path-consumer-db', 800);
                 flashNode('db', '#58a6ff');
-            }
-
-            // Final Step: Show AI insight if requested
-            const useAI = type === 'ai';
-            if (useAI) {
-                addStep("Inteligência Artificial", "Gemini AI gerou previsões de estoque para os próximos 30 dias.", "auto_awesome", "text-surface-tint");
-                await runPath('#path-app-ai', 1000);
-                flashNode('ai', '#ffb870');
+            } else {
+                // 4. Consumer to DLQ (Failure path)
+                addStep("Falha Crítica", "Erro no processamento. Movendo para Dead Letter Queue.", "error", "text-error");
+                particle.setAttribute('fill', '#ffb4ab');
+                await runPath('#path-consumer-dlq', 1000);
+                flashNode('dlq', '#ffb4ab');
             }
 
             particle.style.display = 'none';
@@ -728,7 +716,7 @@
             };
 
             resultSteps.innerHTML = steps.join('');
-            resultSummary.innerText = `>>> Fluxo finalizado em ${((steps.length * 800) / 1000).toFixed(2)}s | Status: 200 OK | ${isCacheHit ? 'CACHE_MODE: OPTIMIZED' : 'CACHE_MODE: RECOVERY'}`;
+            resultSummary.innerText = `>>> Ciclo finalizado em ${((steps.length * 800) / 1000).toFixed(2)}s | Tracing ID: ${crypto.randomUUID().substring(0, 8)} | STATUS: ${isSuccess ? 'COMPLETED' : 'DLQ_REDIRECTED'}`;
             
             if (window.innerWidth < 1024) {
                 setTimeout(showResult, 1000);
