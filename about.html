@@ -13,6 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -109,6 +110,7 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+
         .stat-highlight {
             border-color: #58A6FF !important;
             box-shadow: 0 0 15px rgba(88, 166, 255, 0.1);
@@ -120,41 +122,48 @@
 <body class="bg-background text-on-background min-h-screen flex flex-col font-body-md antialiased pt-20">
     <!-- TopNavBar -->
     <header class="fixed top-0 left-0 w-full z-50 bg-[#0D1117] border-b border-[#30363D]">
-        <div class="max-w-[1200px] mx-auto flex justify-between items-center px-6 md:px-12 py-4 font-space-grotesk tracking-tight">
+        <div
+            class="max-w-[1200px] mx-auto flex justify-between items-center px-6 md:px-12 py-4 font-space-grotesk tracking-tight">
             <div class="text-xl font-bold tracking-widest text-[#58A6FF]">WELLINGTON COSTA</div>
-        <div class="hidden md:flex gap-6 items-center">
-            <a class="text-[#8B949E] font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
-                href="index.html">Início</a>
-            <a class="text-[#58A6FF] border-b-2 border-[#58A6FF] pb-1 hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
-                href="about.html">Sobre</a>
-            <a class="text-[#8B949E] font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
-                href="projects.html">Projetos</a>
-            <a class="text-[#8B949E] font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
-                href="skills.html">Habilidades</a>
-            <a class="text-[#8B949E] font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
-                href="contact.html">Contato</a>
-        </div>
-        <div class="flex items-center gap-4">
-            <div class="hidden md:flex gap-2">
-                <span class="material-symbols-outlined text-[#8B949E] hover:text-white transition-colors cursor-pointer">terminal</span>
-                <span class="material-symbols-outlined text-[#8B949E] hover:text-white transition-colors cursor-pointer">code</span>
+            <div class="hidden md:flex gap-6 items-center">
+                <a class="text-[#8B949E] font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
+                    href="index.html">Início</a>
+                <a class="text-[#58A6FF] border-b-2 border-[#58A6FF] pb-1 hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
+                    href="about.html">Sobre</a>
+                <a class="text-[#8B949E] font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
+                    href="projects.html">Projetos</a>
+                <a class="text-[#8B949E] font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
+                    href="skills.html">Habilidades</a>
+                <a class="text-[#8B949E] font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
+                    href="contact.html">Contato</a>
             </div>
-            <a href="contact.html"
-                class="hidden sm:block bg-[#58A6FF] text-[#0D1117] px-4 py-2 rounded-DEFAULT font-space-grotesk font-bold hover:bg-white transition-colors active:scale-95">Contato</a>
-            <button id="mobile-menu-toggle" class="md:hidden text-slate-300 hover:text-white transition-colors p-1">
-                <span class="material-symbols-outlined">menu</span>
-            </button>
+            <div class="flex items-center gap-4">
+                <div class="hidden md:flex gap-2">
+                    <span
+                        class="material-symbols-outlined text-[#8B949E] hover:text-white transition-colors cursor-pointer">terminal</span>
+                    <span
+                        class="material-symbols-outlined text-[#8B949E] hover:text-white transition-colors cursor-pointer">code</span>
+                </div>
+                <a href="contact.html"
+                    class="hidden sm:block bg-[#58A6FF] text-[#0D1117] px-4 py-2 rounded-DEFAULT font-space-grotesk font-bold text-sm hover:bg-white transition-colors active:scale-95">Entre
+                    em Contato</a>
+                <button id="mobile-menu-toggle" class="md:hidden text-slate-300 hover:text-white transition-colors p-1">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
         </div>
-    </div>
-    <!-- Mobile Menu Drawer -->
-    <div id="mobile-menu" class="hidden md:hidden bg-[#0D1117] border-b border-[#30363D] py-6 px-6 flex flex-col gap-4 shadow-xl">
-        <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="index.html">Início</a>
-        <a class="text-[#58A6FF] font-medium py-2 border-b border-white/5" href="about.html">Sobre</a>
-        <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="projects.html">Projetos</a>
-        <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="skills.html">Habilidades</a>
-        <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="contact.html">Contato</a>
-        <a href="contact.html" class="sm:hidden bg-[#58A6FF] text-[#001c38] px-4 py-3 rounded-DEFAULT font-bold text-center mt-4">Entre em Contato</a>
-    </div>
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-[#0D1117] border-b border-[#30363D] py-6 px-6 flex flex-col gap-4 shadow-xl">
+            <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="index.html">Início</a>
+            <a class="text-[#58A6FF] font-medium py-2 border-b border-white/5" href="about.html">Sobre</a>
+            <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="projects.html">Projetos</a>
+            <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="skills.html">Habilidades</a>
+            <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="contact.html">Contato</a>
+            <a href="contact.html"
+                class="sm:hidden bg-[#58A6FF] text-[#001c38] px-4 py-3 rounded-DEFAULT font-bold text-center mt-4">Entre
+                em Contato</a>
+        </div>
     </header>
     <!-- Main Content -->
     <main class="flex-grow w-full max-w-[1200px] mx-auto px-6 md:px-12 py-12 flex flex-col gap-xl">
@@ -162,30 +171,51 @@
         <section class="grid grid-cols-1 md:grid-cols-12 gap-md">
             <div
                 class="md:col-span-4 order-first md:order-none bg-surface-container rounded-lg border border-outline-variant p-0 overflow-hidden relative aspect-square w-[180px] mx-auto md:w-full md:h-auto md:min-h-[300px] flex items-center justify-center">
-                <img alt="Wellington Costa - Desenvolvedor Java" class="w-full h-full object-cover opacity-90 transition-opacity duration-500 hover:opacity-100"
+                <img alt="Wellington Costa - Desenvolvedor Java"
+                    class="w-full h-full object-cover opacity-90 transition-opacity duration-500 hover:opacity-100"
                     src="images/well-mao-no-rosto.jpg" />
                 <div
                     class="absolute inset-0 bg-gradient-to-t from-surface-container/50 to-transparent flex flex-col justify-end p-md">
-                    <div class="font-code-block text-[12px] sm:text-[13px] text-white text-center w-full drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] font-bold whitespace-nowrap">
-                        <span class="hidden sm:inline text-slate-300">System.out.</span><span class="text-white">println</span>(<span class="text-slate-200">"Olá Mundo"</span>);
+                    <div
+                        class="font-code-block text-[12px] sm:text-[13px] text-white text-center w-full drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] font-bold whitespace-nowrap">
+                        <span class="hidden sm:inline text-slate-300">System.out.</span><span
+                            class="text-white">println</span>(<span class="text-slate-200">"Olá Mundo"</span>);
                     </div>
                 </div>
             </div>
             <div id="introduce-container"
                 class="group md:col-span-8 bg-surface-container rounded-lg border border-outline-variant p-md flex flex-col gap-sm justify-center cursor-pointer md:cursor-default transition-all duration-300 hover:shadow-lg hover:shadow-secondary-container/5">
                 <h1 class="font-h1 text-2xl sm:text-h1 text-on-surface flex items-center justify-between">
-                    <span><span style="color: #C678DD;">public void</span> <span style="color: #61AFEF;">introduce</span>() {</span>
-                    <span id="introduce-arrow" class="material-symbols-outlined md:hidden transition-all duration-300 bg-secondary-container/10 p-1 rounded-full text-secondary-container">expand_more</span>
+                    <span><span style="color: #C678DD;">public void</span> <span
+                            style="color: #61AFEF;">introduce</span>() {</span>
+                    <span id="introduce-arrow"
+                        class="material-symbols-outlined md:hidden transition-all duration-300 bg-secondary-container/10 p-1 rounded-full text-secondary-container">expand_more</span>
                 </h1>
-                
+
                 <!-- Mobile Hint Comment -->
-                <div id="introduce-hint" class="md:hidden font-code-block text-sm text-slate-500 italic pl-4 transition-opacity duration-300">
+                <div id="introduce-hint"
+                    class="md:hidden font-code-block text-sm text-slate-500 italic pl-4 transition-opacity duration-300">
                     // Clique para expandir detalhes do perfil...
                 </div>
 
-                <div id="introduce-content" class="overflow-hidden transition-all duration-500 max-h-0 opacity-0 md:max-h-none md:opacity-100">
-                    <p id="about-text" class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed pl-4 border-l-2 border-surface-variant py-2 opacity-0 md:opacity-100">
-                        Desenvolvedor Java Backend em início de carreira, apaixonado por construir soluções eficientes e aprender novas tecnologias. Com uma base sólida em Java, Spring Boot e boas práticas de desenvolvimento, busco criar APIs limpas e bem documentadas. Meu foco está no desenvolvimento contínuo e na aplicação de Clean Code para garantir a qualidade e manutenibilidade dos meus projetos.
+                <div id="introduce-content"
+                    class="overflow-hidden transition-all duration-500 max-h-0 opacity-0 md:max-h-none md:opacity-100">
+                    <p id="about-text"
+                        class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed pl-4 border-l-2 border-surface-variant py-2 opacity-0 md:opacity-100">
+                        Mais do que escrever código, meu propósito é <b>arquitetar soluções que impulsionam
+                            negócios</b>.
+                        Acredito que a excelência técnica fundamentada em <b>Clean Code</b>, <b>SOLID</b> e uma cultura
+                        rigorosa de <b>testes automatizados (JUnit/Mockito)</b> é o que garante a longevidade de
+                        qualquer software.
+                        <br><br>
+                        Minha experiência prática foca na construção de <b>sistemas distribuídos e resilientes</b>.
+                        Utilizo <b>Apache Kafka</b> para mensageria de alta volumetria (com estratégias avançadas de
+                        DLQ), <b>Redis</b> para performance em cache e <b>Docker</b> para infraestrutura moderna. Em
+                        projetos como o <b>SmartStock AI</b> e <b>The Pulse</b>, dominei desafios complexos como
+                        <b>rastreabilidade distribuída</b> e <b>concorrência de dados (Locks Otimistas)</b>.
+                        <br><br>
+                        Sou apaixonado por entregar APIs que não apenas funcionam, mas que são seguras, escaláveis e
+                        prontas para o mundo real.
                     </p>
                 </div>
                 <h1 class="font-h1 text-2xl sm:text-h1 text-on-surface">}</h1>
@@ -195,28 +225,43 @@
         <section id="stats-section" class="grid grid-cols-2 md:grid-cols-5 gap-md">
             <div
                 class="stat-card group bg-surface-container rounded-lg border border-outline-variant p-sm flex flex-col gap-xs items-center justify-center text-center transition-all duration-700">
-                <span class="font-display text-3xl sm:text-display text-primary transition-colors duration-300">2+</span>
-                <span class="font-label-caps text-label-caps text-on-surface-variant transition-colors duration-300">ANOS DE PRÁTICA</span>
+                <span
+                    class="font-display text-3xl sm:text-display text-primary transition-colors duration-300">2+</span>
+                <span
+                    class="font-label-caps text-label-caps text-on-surface-variant transition-colors duration-300">ANOS
+                    DE PRÁTICA</span>
             </div>
             <div
                 class="stat-card group bg-surface-container rounded-lg border border-outline-variant p-sm flex flex-col gap-xs items-center justify-center text-center transition-all duration-700">
-                <span class="font-display text-3xl sm:text-display text-primary transition-colors duration-300">10+</span>
-                <span class="font-label-caps text-label-caps text-on-surface-variant transition-colors duration-300">PROJETOS GITHUB</span>
+                <span
+                    class="font-display text-3xl sm:text-display text-primary transition-colors duration-300">10+</span>
+                <span
+                    class="font-label-caps text-label-caps text-on-surface-variant transition-colors duration-300">PROJETOS
+                    GITHUB</span>
             </div>
             <div
                 class="stat-card group bg-surface-container rounded-lg border border-outline-variant p-sm flex flex-col gap-xs items-center justify-center text-center transition-all duration-700">
-                <span class="font-display text-3xl sm:text-display text-primary transition-colors duration-300">100%</span>
-                <span class="font-label-caps text-label-caps text-on-surface-variant transition-colors duration-300">FOCO EM QUALIDADE</span>
+                <span
+                    class="font-display text-3xl sm:text-display text-primary transition-colors duration-300">100%</span>
+                <span
+                    class="font-label-caps text-label-caps text-on-surface-variant transition-colors duration-300">FOCO
+                    EM QUALIDADE</span>
             </div>
             <div
                 class="stat-card group bg-surface-container rounded-lg border border-outline-variant p-sm flex flex-col gap-xs items-center justify-center text-center transition-all duration-700">
-                <span class="font-display text-3xl sm:text-display text-primary transition-colors duration-300">+200</span>
-                <span class="font-label-caps text-label-caps text-on-surface-variant transition-colors duration-300">COMMITS REALIZADOS</span>
+                <span
+                    class="font-display text-3xl sm:text-display text-primary transition-colors duration-300">+200</span>
+                <span
+                    class="font-label-caps text-label-caps text-on-surface-variant transition-colors duration-300">COMMITS
+                    REALIZADOS</span>
             </div>
             <div
                 class="stat-card group bg-surface-container rounded-lg border border-outline-variant p-sm flex flex-col gap-xs items-center justify-center text-center transition-all duration-700">
-                <span class="font-display text-3xl sm:text-display text-primary transition-colors duration-300">5+</span>
-                <span class="font-label-caps text-label-caps text-on-surface-variant transition-colors duration-300">CURSOS & CERTIFICAÇÕES</span>
+                <span
+                    class="font-display text-3xl sm:text-display text-primary transition-colors duration-300">5+</span>
+                <span
+                    class="font-label-caps text-label-caps text-on-surface-variant transition-colors duration-300">CURSOS
+                    & CERTIFICAÇÕES</span>
             </div>
         </section>
     </main>
@@ -227,23 +272,29 @@
                 <!-- Branding -->
                 <div class="flex flex-col items-center md:items-start gap-1">
                     <div class="text-lg font-bold tracking-widest text-slate-100">WELLINGTON COSTA</div>
-                    <div class="text-[10px] text-[#58A6FF] font-mono tracking-tighter opacity-70">java.version: 21.0.1</div>
+                    <div class="text-[10px] text-[#58A6FF] font-mono tracking-tighter opacity-70">java.version: 21.0.1
+                    </div>
                 </div>
 
                 <!-- Copyright -->
                 <div class="order-3 md:order-2 text-[#8B949E] text-xs md:text-sm text-center font-mono">
-                    <span class="hidden md:inline">© 2024 System.out.println('Portfolio'); | Construído para Performance</span>
+                    <span class="hidden md:inline">© 2024 System.out.println('Portfolio'); | Construído para
+                        Performance</span>
                     <span class="md:hidden">© 2024 System.out.println('Portfolio');</span>
                 </div>
 
                 <!-- Socials -->
                 <div class="order-2 md:order-3 flex items-center gap-6">
-                    <a class="text-slate-400 hover:text-[#58A6FF] transition-all duration-300" href="https://github.com/WellSCosta">
-                        <span class="md:hidden text-xs font-bold border border-slate-700 px-3 py-1 rounded-full">GITHUB</span>
+                    <a class="text-slate-400 hover:text-[#58A6FF] transition-all duration-300"
+                        href="https://github.com/WellSCosta">
+                        <span
+                            class="md:hidden text-xs font-bold border border-slate-700 px-3 py-1 rounded-full">GITHUB</span>
                         <span class="hidden md:inline">GitHub</span>
                     </a>
-                    <a class="text-slate-400 hover:text-[#58A6FF] transition-all duration-300" href="https://www.linkedin.com/in/wellcosta-dev/">
-                        <span class="md:hidden text-xs font-bold border border-slate-700 px-3 py-1 rounded-full">LINKEDIN</span>
+                    <a class="text-slate-400 hover:text-[#58A6FF] transition-all duration-300"
+                        href="https://www.linkedin.com/in/wellcosta-dev/">
+                        <span
+                            class="md:hidden text-xs font-bold border border-slate-700 px-3 py-1 rounded-full">LINKEDIN</span>
                         <span class="hidden md:inline">LinkedIn</span>
                     </a>
                 </div>
@@ -258,7 +309,7 @@
             const fullHtml = element.innerHTML;
             element.innerHTML = '';
             element.classList.remove('opacity-0');
-            
+
             let i = 0;
             let currentHtml = '';
 
@@ -358,4 +409,5 @@
         }
     </script>
 </body>
+
 </html>

@@ -13,6 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -169,15 +170,17 @@
 
         /* Animated Border Logic */
         @keyframes border-rotate {
-            0% { 
-                transform: translate(-50%, -50%) rotate(135deg); 
+            0% {
+                transform: translate(-50%, -50%) rotate(135deg);
                 animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
             }
-            70% { 
-                transform: translate(-50%, -50%) rotate(495deg); 
+
+            70% {
+                transform: translate(-50%, -50%) rotate(495deg);
             }
-            100% { 
-                transform: translate(-50%, -50%) rotate(495deg); 
+
+            100% {
+                transform: translate(-50%, -50%) rotate(495deg);
             }
         }
 
@@ -195,12 +198,10 @@
             position: absolute;
             width: 500%;
             height: 500%;
-            background: conic-gradient(
-                from 0deg,
-                transparent 45%,
-                #58A6FF 50%,
-                transparent 55%
-            );
+            background: conic-gradient(from 0deg,
+                    transparent 45%,
+                    #58A6FF 50%,
+                    transparent 55%);
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%) rotate(135deg);
@@ -221,47 +222,53 @@
 <body class="bg-[#0D1117] text-on-background font-body-md text-body-md min-h-screen flex flex-col pt-20">
     <!-- TopNavBar -->
     <header class="fixed top-0 left-0 w-full z-50 bg-[#0D1117] border-b border-[#30363D]">
-        <div class="max-w-[1200px] mx-auto flex justify-between items-center px-6 md:px-12 py-4 font-space-grotesk tracking-tight">
+        <div
+            class="max-w-[1200px] mx-auto flex justify-between items-center px-6 md:px-12 py-4 font-space-grotesk tracking-tight">
             <div class="text-xl font-bold tracking-widest text-[#58A6FF]">WELLINGTON COSTA</div>
-        <div class="hidden md:flex gap-6 items-center">
-            <a class="text-[#8B949E] font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
-                href="index.html">Início</a>
-            <a class="text-[#8B949E] font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
-                href="about.html">Sobre</a>
-            <a class="text-[#8B949E] font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
-                href="projects.html">Projetos</a>
-            <a class="text-[#8B949E] font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
-                href="skills.html">Habilidades</a>
-            <a class="text-[#58A6FF] border-b-2 border-[#58A6FF] pb-1 hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
-                href="contact.html">Contato</a>
+            <div class="hidden md:flex gap-6 items-center">
+                <a class="text-[#8B949E] font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
+                    href="index.html">Início</a>
+                <a class="text-[#8B949E] font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
+                    href="about.html">Sobre</a>
+                <a class="text-[#8B949E] font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
+                    href="projects.html">Projetos</a>
+                <a class="text-[#8B949E] font-medium hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
+                    href="skills.html">Habilidades</a>
+                <a class="text-[#58A6FF] border-b-2 border-[#58A6FF] pb-1 hover:text-white transition-colors duration-200 active:scale-95 transition-transform"
+                    href="contact.html">Contato</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="material-symbols-outlined text-[#8B949E] hover:text-white cursor-pointer"
+                    data-icon="terminal">terminal</span>
+                <span class="material-symbols-outlined text-[#8B949E] hover:text-white cursor-pointer"
+                    data-icon="code">code</span>
+                <a href="contact.html"
+                    class="hidden sm:block bg-[#58A6FF] text-[#0D1117] px-4 py-2 rounded font-semibold text-sm hover:bg-opacity-90 transition-all ml-2">Entre
+                    em Contato</a>
+                <button id="mobile-menu-toggle" class="md:hidden text-slate-300 hover:text-white transition-colors p-1">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
         </div>
-        <div class="flex items-center gap-4">
-            <span class="material-symbols-outlined text-[#8B949E] hover:text-white cursor-pointer"
-                data-icon="terminal">terminal</span>
-            <span class="material-symbols-outlined text-[#8B949E] hover:text-white cursor-pointer"
-                data-icon="code">code</span>
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-[#0D1117] border-b border-[#30363D] py-6 px-6 flex flex-col gap-4 shadow-xl">
+            <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="index.html">Início</a>
+            <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="about.html">Sobre</a>
+            <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="projects.html">Projetos</a>
+            <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="skills.html">Habilidades</a>
+            <a class="text-[#58A6FF] font-medium py-2 border-b border-white/5" href="contact.html">Contato</a>
             <a href="contact.html"
-                class="hidden sm:block bg-[#58A6FF] text-[#0D1117] px-4 py-2 rounded font-semibold text-sm hover:bg-opacity-90 transition-all ml-2">Contato</a>
-            <button id="mobile-menu-toggle" class="md:hidden text-slate-300 hover:text-white transition-colors p-1">
-                <span class="material-symbols-outlined">menu</span>
-            </button>
+                class="sm:hidden bg-[#58A6FF] text-[#001c38] px-4 py-3 rounded-DEFAULT font-bold text-center mt-4">Entre
+                em Contato</a>
         </div>
-    </div>
-    <!-- Mobile Menu Drawer -->
-    <div id="mobile-menu" class="hidden md:hidden bg-[#0D1117] border-b border-[#30363D] py-6 px-6 flex flex-col gap-4 shadow-xl">
-        <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="index.html">Início</a>
-        <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="about.html">Sobre</a>
-        <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="projects.html">Projetos</a>
-        <a class="text-slate-300 font-medium py-2 border-b border-white/5" href="skills.html">Habilidades</a>
-        <a class="text-[#58A6FF] font-medium py-2 border-b border-white/5" href="contact.html">Contato</a>
-        <a href="contact.html" class="sm:hidden bg-[#58A6FF] text-[#001c38] px-4 py-3 rounded-DEFAULT font-bold text-center mt-4">Entre em Contato</a>
-    </div>
     </header>
     <!-- Main Content -->
     <main class="flex-grow max-w-[1200px] mx-auto w-full px-6 md:px-12 py-12 md:py-24">
         <div class="mb-12 text-center md:text-left">
             <h1 class="font-display text-4xl sm:text-display text-white mb-4">Inicializar Conexão</h1>
-            <p class="font-body-lg text-body-lg text-[#8B949E] max-w-2xl mx-auto md:mx-0">Pronto para arquitetar soluções backend robustas ou discutir designs de sistemas escaláveis? Abra um canal abaixo.</p>
+            <p class="font-body-lg text-body-lg text-[#8B949E] max-w-2xl mx-auto md:mx-0">Pronto para arquitetar
+                soluções backend robustas? Abra um canal abaixo.</p>
         </div>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <!-- Contact Form Area (8 cols) -->
@@ -269,52 +276,60 @@
                 <div class="contact-form-wrapper">
                     <div class="contact-form-content p-8 relative overflow-hidden">
                         <!-- Removi a linha estática pois agora temos a borda animada -->
-                <div class="flex items-center justify-between border-b border-[#30363D] pb-4 mb-6">
-                    <div class="flex items-center gap-2">
-                        <span class="material-symbols-outlined text-[#8B949E]" data-icon="terminal">terminal</span>
-                        <span class="font-code-block text-code-block text-[#8B949E]">contact_form.java</span>
-                    </div>
-                </div>
-                <form class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="space-y-2">
-                            <label class="font-label-caps text-label-caps text-[#8B949E] uppercase block"
-                                for="name">String nomeCompleto;</label>
-                            <input
-                                class="w-full bg-[#0D1117] border border-[#30363D] rounded px-4 py-3 text-white focus:outline-none focus:border-[#58A6FF] focus:ring-1 focus:ring-[#58A6FF] transition-all"
-                                id="name" placeholder="Digite seu nome" type="text" />
+                        <div class="flex items-center justify-between border-b border-[#30363D] pb-4 mb-6">
+                            <div class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-[#8B949E]"
+                                    data-icon="terminal">terminal</span>
+                                <span class="font-code-block text-code-block text-[#8B949E]">contact_form.java</span>
+                            </div>
                         </div>
-                        <div class="space-y-2">
-                            <label class="font-label-caps text-label-caps text-[#8B949E] uppercase block"
-                                for="email">String enderecoEmail;</label>
-                            <input
-                                class="w-full bg-[#0D1117] border border-[#30363D] rounded px-4 py-3 text-white focus:outline-none focus:border-[#58A6FF] focus:ring-1 focus:ring-[#58A6FF] transition-all"
-                                id="email" placeholder="Digite seu e-mail" type="email" />
-                        </div>
-                    </div>
-                    <div class="space-y-2">
-                        <label class="font-label-caps text-label-caps text-[#8B949E] uppercase block"
-                            for="subject">String linhaAssunto;</label>
-                        <input
-                            class="w-full bg-[#0D1117] border border-[#30363D] rounded px-4 py-3 text-white focus:outline-none focus:border-[#58A6FF] focus:ring-1 focus:ring-[#58A6FF] transition-all"
-                            id="subject" placeholder="Assunto da consulta" type="text" />
-                    </div>
-                    <div class="space-y-2">
-                        <label class="font-label-caps text-label-caps text-[#8B949E] uppercase block"
-                            for="message">String corpoMensagem;</label>
-                        <textarea
-                            class="w-full bg-[#0D1117] border border-[#30363D] rounded px-4 py-3 text-white focus:outline-none focus:border-[#58A6FF] focus:ring-1 focus:ring-[#58A6FF] transition-all resize-y"
-                            id="message" placeholder="System.out.println('Sua mensagem aqui...');" rows="5"></textarea>
-                    </div>
-                    <div class="pt-4 flex justify-end">
-                        <button
-                            class="bg-[#58A6FF] text-[#0D1117] font-h2 text-[16px] px-8 py-3 rounded-md hover:bg-opacity-90 transition-all flex items-center gap-2"
-                            type="submit">
-                            <span class="material-symbols-outlined" data-icon="send">send</span>
-                            Executar Envio
-                        </button>
-                    </div>
-                </form>
+                        <form id="contact-form" action="https://formspree.io/f/xkoyqwyb" method="POST"
+                            class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="font-label-caps text-label-caps text-[#8B949E] uppercase block"
+                                        for="name">String nomeCompleto;</label>
+                                    <input
+                                        class="w-full bg-[#0D1117] border border-[#30363D] rounded px-4 py-3 text-white focus:outline-none focus:border-[#58A6FF] focus:ring-1 focus:ring-[#58A6FF] transition-all"
+                                        id="name" name="name" placeholder="Digite seu nome" type="text" required />
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="font-label-caps text-label-caps text-[#8B949E] uppercase block"
+                                        for="email">String enderecoEmail;</label>
+                                    <input
+                                        class="w-full bg-[#0D1117] border border-[#30363D] rounded px-4 py-3 text-white focus:outline-none focus:border-[#58A6FF] focus:ring-1 focus:ring-[#58A6FF] transition-all"
+                                        id="email" name="email" placeholder="Digite seu e-mail" type="email" required />
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-label-caps text-label-caps text-[#8B949E] uppercase block"
+                                    for="subject">String linhaAssunto;</label>
+                                <input
+                                    class="w-full bg-[#0D1117] border border-[#30363D] rounded px-4 py-3 text-white focus:outline-none focus:border-[#58A6FF] focus:ring-1 focus:ring-[#58A6FF] transition-all"
+                                    id="subject" name="subject" placeholder="Assunto da consulta" type="text"
+                                    required />
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-label-caps text-label-caps text-[#8B949E] uppercase block"
+                                    for="message">String corpoMensagem;</label>
+                                <textarea
+                                    class="w-full bg-[#0D1117] border border-[#30363D] rounded px-4 py-3 text-white focus:outline-none focus:border-[#58A6FF] focus:ring-1 focus:ring-[#58A6FF] transition-all resize-y"
+                                    id="message" name="message"
+                                    placeholder="System.out.println('Sua mensagem aqui...');" rows="5"
+                                    required></textarea>
+                            </div>
+                            <div class="pt-4 flex flex-col gap-4">
+                                <div class="flex justify-end">
+                                    <button id="submit-button"
+                                        class="bg-[#58A6FF] text-[#0D1117] font-h2 text-[16px] px-8 py-3 rounded-md hover:bg-opacity-90 transition-all flex items-center gap-2"
+                                        type="submit">
+                                        <span class="material-symbols-outlined" data-icon="send">send</span>
+                                        <span id="submit-text">Executar Envio</span>
+                                    </button>
+                                </div>
+                                <div id="form-status" class="hidden text-center p-3 rounded font-medium text-sm"></div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -363,7 +378,8 @@
                             <div class="text-white font-code-block text-code-block text-sm">wellscostaofc@gmail.com
                             </div>
                         </div>
-                        <button onclick="copyEmail()" class="text-[#8B949E] hover:text-[#58A6FF] transition-colors" title="Copiar para a área de transferência">
+                        <button onclick="copyEmail()" class="text-[#8B949E] hover:text-[#58A6FF] transition-colors"
+                            title="Copiar para a área de transferência">
                             <span class="material-symbols-outlined" id="copy-icon">content_copy</span>
                         </button>
                     </div>
@@ -374,7 +390,8 @@
                         <div class="w-2 h-2 rounded-full bg-[#58A6FF] animate-pulse"></div>
                         <div class="font-label-caps text-label-caps text-white">STATUS DO SISTEMA: ONLINE</div>
                     </div>
-                    <p class="text-[#8B949E] text-sm mt-2">Atualmente aceitando novos desafios arquiteturais e cargos de backend empresarial.</p>
+                    <p class="text-[#8B949E] text-sm mt-2">Atualmente aceitando novos desafios arquiteturais e cargos de
+                        backend empresarial.</p>
                 </div>
             </div>
         </div>
@@ -386,23 +403,29 @@
                 <!-- Branding -->
                 <div class="flex flex-col items-center md:items-start gap-1">
                     <div class="text-lg font-bold tracking-widest text-slate-100">WELLINGTON COSTA</div>
-                    <div class="text-[10px] text-[#58A6FF] font-mono tracking-tighter opacity-70">java.version: 21.0.1</div>
+                    <div class="text-[10px] text-[#58A6FF] font-mono tracking-tighter opacity-70">java.version: 21.0.1
+                    </div>
                 </div>
 
                 <!-- Copyright -->
                 <div class="order-3 md:order-2 text-[#8B949E] text-xs md:text-sm text-center font-mono">
-                    <span class="hidden md:inline">© 2024 System.out.println('Portfolio'); | Construído para Performance</span>
+                    <span class="hidden md:inline">© 2024 System.out.println('Portfolio'); | Construído para
+                        Performance</span>
                     <span class="md:hidden">© 2024 System.out.println('Portfolio');</span>
                 </div>
 
                 <!-- Socials -->
                 <div class="order-2 md:order-3 flex items-center gap-6">
-                    <a class="text-slate-400 hover:text-[#58A6FF] transition-all duration-300" href="https://github.com/WellSCosta">
-                        <span class="md:hidden text-xs font-bold border border-slate-700 px-3 py-1 rounded-full">GITHUB</span>
+                    <a class="text-slate-400 hover:text-[#58A6FF] transition-all duration-300"
+                        href="https://github.com/WellSCosta">
+                        <span
+                            class="md:hidden text-xs font-bold border border-slate-700 px-3 py-1 rounded-full">GITHUB</span>
                         <span class="hidden md:inline">GitHub</span>
                     </a>
-                    <a class="text-slate-400 hover:text-[#58A6FF] transition-all duration-300" href="https://www.linkedin.com/in/wellcosta-dev/">
-                        <span class="md:hidden text-xs font-bold border border-slate-700 px-3 py-1 rounded-full">LINKEDIN</span>
+                    <a class="text-slate-400 hover:text-[#58A6FF] transition-all duration-300"
+                        href="https://www.linkedin.com/in/wellcosta-dev/">
+                        <span
+                            class="md:hidden text-xs font-bold border border-slate-700 px-3 py-1 rounded-full">LINKEDIN</span>
                         <span class="hidden md:inline">LinkedIn</span>
                     </a>
                 </div>
@@ -418,6 +441,56 @@
                 setTimeout(() => {
                     icon.innerText = 'content_copy';
                 }, 2000);
+            });
+        }
+
+        const form = document.getElementById('contact-form');
+        const status = document.getElementById('form-status');
+        const submitBtn = document.getElementById('submit-button');
+        const submitText = document.getElementById('submit-text');
+
+        if (form) {
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                // UI Loading State
+                submitBtn.disabled = true;
+                submitBtn.style.opacity = '0.5';
+                submitBtn.style.cursor = 'not-allowed';
+                submitText.innerText = 'Processando...';
+
+                status.classList.add('hidden');
+                status.innerText = '';
+
+                const formData = new FormData(form);
+
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    if (response.ok) {
+                        status.innerText = "Mensagem enviada com sucesso! Entrarei em contato em breve.";
+                        status.className = "text-green-400 bg-green-400/10 p-3 rounded font-medium block mt-2";
+                        form.reset();
+                    } else {
+                        const result = await response.json();
+                        status.innerText = result.errors ? result.errors.map(err => err.message).join(", ") : "Ops! Ocorreu um erro no envio.";
+                        status.className = "text-red-400 bg-red-400/10 p-3 rounded font-medium block mt-2";
+                    }
+                } catch (error) {
+                    status.innerText = "Erro de conexão. Verifique sua internet.";
+                    status.className = "text-red-400 bg-red-400/10 p-3 rounded font-medium block mt-2";
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.style.opacity = '1';
+                    submitBtn.style.cursor = 'pointer';
+                    submitText.innerText = 'Executar Envio';
+                }
             });
         }
 
